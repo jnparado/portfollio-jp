@@ -35,7 +35,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white text-zinc-950 dark:bg-black dark:text-zinc-50">
-        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(99,102,241,0.14),rgba(255,255,255,0))] dark:bg-[radial-gradient(60%_50%_at_50%_0%,rgba(99,102,241,0.22),rgba(0,0,0,0))]" />
+        <div className="bg-animated">
+          <div className="bg-blob blob-1" />
+          <div className="bg-blob blob-2" />
+          <div className="bg-blob blob-3" />
+        </div>
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />

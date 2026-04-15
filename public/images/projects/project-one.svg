@@ -1,0 +1,30 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0B12"/>
+      <stop offset="0.5" stop-color="#0A0A0F"/>
+      <stop offset="1" stop-color="#07070B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="1200" y1="0" x2="0" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#2563EB" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="blur" x="-40" y="-40" width="1280" height="880" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <path d="M70 560C190 430 340 390 460 460C600 542 720 556 870 490C1000 432 1090 350 1150 300" stroke="white" stroke-opacity="0.12" stroke-width="3"/>
+  <path d="M60 300C170 210 320 220 430 300C560 392 700 420 840 380C980 340 1090 250 1160 210" stroke="white" stroke-opacity="0.09" stroke-width="3"/>
+  <g filter="url(#blur)">
+    <circle cx="260" cy="260" r="140" fill="url(#accent)" opacity="0.9"/>
+    <circle cx="900" cy="520" r="220" fill="url(#accent)" opacity="0.65"/>
+  </g>
+  <rect x="120" y="150" width="520" height="320" rx="22" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.10"/>
+  <rect x="150" y="190" width="280" height="16" rx="8" fill="white" fill-opacity="0.20"/>
+  <rect x="150" y="225" width="420" height="12" rx="6" fill="white" fill-opacity="0.12"/>
+  <rect x="150" y="250" width="360" height="12" rx="6" fill="white" fill-opacity="0.10"/>
+  <rect x="150" y="305" width="460" height="140" rx="16" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.08"/>
+</svg>
+

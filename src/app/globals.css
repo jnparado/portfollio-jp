@@ -26,6 +26,93 @@ body {
     Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+.bg-animated {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-animated::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 50% at 50% 0%, rgba(99, 102, 241, 0.16), rgba(0, 0, 0, 0)),
+    radial-gradient(45% 45% at 18% 25%, rgba(245, 158, 11, 0.12), rgba(0, 0, 0, 0)),
+    radial-gradient(55% 55% at 82% 38%, rgba(168, 85, 247, 0.12), rgba(0, 0, 0, 0));
+  opacity: 0.9;
+}
+
+.bg-blob {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  filter: blur(48px);
+  border-radius: 9999px;
+  opacity: 0.22;
+  mix-blend-mode: screen;
+  animation: blobFloat 14s ease-in-out infinite;
+}
+.bg-blob.blob-1 {
+  left: -120px;
+  top: 140px;
+  background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.75), rgba(0, 0, 0, 0));
+}
+.bg-blob.blob-2 {
+  right: -160px;
+  top: 260px;
+  width: 620px;
+  height: 620px;
+  animation-duration: 18s;
+  background: radial-gradient(circle at 30% 30%, rgba(168, 85, 247, 0.7), rgba(0, 0, 0, 0));
+}
+.bg-blob.blob-3 {
+  left: 30%;
+  bottom: -220px;
+  width: 740px;
+  height: 740px;
+  animation-duration: 20s;
+  background: radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.55), rgba(0, 0, 0, 0));
+}
+
+@keyframes blobFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(28px, -24px, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 650ms ease,
+    transform 650ms ease;
+  will-change: opacity, transform;
+}
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-blob {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

@@ -7,6 +7,8 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
+  imageSrc?: string;
+  imageAlt?: string;
   href?: string;
   repoHref?: string;
 };
@@ -18,6 +20,13 @@ export type EducationItem = {
   period: string;
   imageSrc: string;
   imageAlt: string;
+};
+
+export type ExperienceItem = {
+  company: string;
+  role: string;
+  kind?: string;
+  period: string;
 };
 
 export const site = {
@@ -55,7 +64,6 @@ export const site = {
     "Kotlin",
     "PHP",
     "Python",
-    "C++",
     "MongoDB",
     "MySQL",
     "PostgreSQL",
@@ -78,6 +86,8 @@ export const site = {
       description:
         "A production-ready app with authentication, dashboards, and a clean design system.",
       tags: ["Next.js", "TypeScript", "Postgres"],
+      imageSrc: "/images/projects/project-one.svg",
+      imageAlt: "Project One preview",
       href: "https://example.com",
       repoHref: "https://github.com/your-handle/project-one",
     },
@@ -86,6 +96,8 @@ export const site = {
       description:
         "A developer tool that speeds up workflows with thoughtful UX and fast performance.",
       tags: ["React", "Tailwind", "DX"],
+      imageSrc: "/images/projects/project-two.svg",
+      imageAlt: "Project Two preview",
       repoHref: "https://github.com/your-handle/project-two",
     },
     {
@@ -93,7 +105,36 @@ export const site = {
       description:
         "An API + UI that focuses on reliability, observability, and maintainability.",
       tags: ["Node.js", "API", "Testing"],
+      imageSrc: "/images/projects/project-three.svg",
+      imageAlt: "Project Three preview",
     },
   ] satisfies Project[],
+  experience: [
+    {
+      company: "Self Employed",
+      role: "Full Stack Developer",
+      period: "Oct 2021 - Present",
+    },
+    {
+      company: "Mapstreak Flyseas",
+      role: "Web Developer | Internship",
+      period: "June 2021 - Dec 2021",
+    },
+    {
+      company: "The Spark Foundation",
+      role: "Website Developer | Internship",
+      period: "May 2021 - June 2021",
+    },
+    {
+      company: "The Spark Foundation",
+      role: "Mobile Application Developer | Internship",
+      period: "April 2021 - May 2021",
+    },
+    {
+      company: "Frshr Technologies",
+      role: "Wordpress Developer | Internship",
+      period: "April 2021 - April 2021",
+    },
+  ] satisfies ExperienceItem[],
 } as const;
 

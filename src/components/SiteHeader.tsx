@@ -49,7 +49,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur">
       <Container>
-        <div className="grid h-16 grid-cols-[44px_1fr_44px] items-center gap-3">
+        <div className="flex h-18 items-center justify-between gap-6">
           <Link
             href="#home"
             aria-label="JP Home"
@@ -59,16 +59,16 @@ export function SiteHeader() {
           </Link>
 
           <nav
-            className="no-scrollbar -mx-3 overflow-x-auto px-3"
+            className="no-scrollbar -mx-3 ml-auto overflow-x-auto px-3"
             aria-label="Primary navigation"
           >
-            <div className="flex w-max items-center gap-4 whitespace-nowrap text-xs font-semibold text-white/90 sm:justify-center sm:gap-7 sm:text-sm">
+            <div className="flex w-max items-center gap-5 whitespace-nowrap text-xs font-semibold text-white/90 sm:justify-center sm:gap-10 sm:text-sm">
               {nav.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={[
-                    "relative py-3 transition-colors",
+                    "relative px-1.5 py-3 transition-colors sm:px-2",
                     active === item.href.replace("#", "")
                       ? "text-indigo-400"
                       : "text-white/90 hover:text-white",
@@ -89,8 +89,6 @@ export function SiteHeader() {
               ))}
             </div>
           </nav>
-
-          <div aria-hidden="true" />
         </div>
       </Container>
       <div className="h-1 w-full bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-700" />
