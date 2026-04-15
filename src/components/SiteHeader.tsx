@@ -49,7 +49,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur">
       <Container>
-        <div className="grid h-16 grid-cols-[44px_1fr_44px] items-center">
+        <div className="grid h-16 grid-cols-[44px_1fr_44px] items-center gap-3">
           <Link
             href="#home"
             aria-label="JP Home"
@@ -58,29 +58,36 @@ export function SiteHeader() {
             JP
           </Link>
 
-          <nav className="flex items-center justify-center gap-7 text-sm font-semibold text-white/90">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={[
-                  "relative py-3 transition-colors",
-                  active === item.href.replace("#", "")
-                    ? "text-indigo-400"
-                    : "text-white/90 hover:text-white",
-                ].join(" ")}
-                onClick={() => setActive(item.href.replace("#", ""))}
-              >
-                {item.label}
-                <span
-                  aria-hidden="true"
+          <nav
+            className="no-scrollbar -mx-3 overflow-x-auto px-3"
+            aria-label="Primary navigation"
+          >
+            <div className="flex w-max items-center gap-4 whitespace-nowrap text-xs font-semibold text-white/90 sm:justify-center sm:gap-7 sm:text-sm">
+              {nav.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
                   className={[
-                    "absolute -bottom-[1px] left-0 h-0.5 w-full rounded-full transition-opacity",
-                    active === item.href.replace("#", "") ? "bg-indigo-400 opacity-100" : "opacity-0",
+                    "relative py-3 transition-colors",
+                    active === item.href.replace("#", "")
+                      ? "text-indigo-400"
+                      : "text-white/90 hover:text-white",
                   ].join(" ")}
-                />
-              </Link>
-            ))}
+                  onClick={() => setActive(item.href.replace("#", ""))}
+                >
+                  {item.label}
+                  <span
+                    aria-hidden="true"
+                    className={[
+                      "absolute -bottom-[1px] left-0 h-0.5 w-full rounded-full transition-opacity",
+                      active === item.href.replace("#", "")
+                        ? "bg-indigo-400 opacity-100"
+                        : "opacity-0",
+                    ].join(" ")}
+                  />
+                </Link>
+              ))}
+            </div>
           </nav>
 
           <div aria-hidden="true" />
