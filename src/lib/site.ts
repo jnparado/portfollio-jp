@@ -19,7 +19,7 @@ export const site = {
     "I build fast, accessible web apps with great UX. I care about clean architecture, performance, and details.",
   email: "paradojeson@gmail.com",
   socials: [
-    { label: "GitHub", href: "https://github.com/your-handle" },
+    { label: "GitHub", href: "https://github.com/jnparado" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/your-handle/" },
     { label: "Resume", href: "/resume.pdf" },
   ] satisfies SocialLink[],
