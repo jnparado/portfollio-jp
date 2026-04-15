@@ -11,31 +11,67 @@ export type Project = {
   repoHref?: string;
 };
 
+export type EducationItem = {
+  degree: string;
+  field: string;
+  school: string;
+  period: string;
+  imageSrc: string;
+  imageAlt: string;
+};
+
 export const site = {
   name: "Jeson Parado",
   role: "Full‑stack Developer",
   location: "City, Country",
   summary:
     "I build fast, accessible web apps with great UX. I care about clean architecture, performance, and details.",
+  phone: "+639639493290",
   email: "paradojeson@gmail.com",
+  address: "Davao City, Philippines",
   socials: [
     { label: "GitHub", href: "https://github.com/jnparado" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/your-handle/" },
     { label: "Resume", href: "/resume.pdf" },
   ] satisfies SocialLink[],
   skills: [
-    "Next.js",
-    "TypeScript",
     "React",
-    "Tailwind",
+    "Express.js",
     "Node.js",
-    "PostgreSQL",
-    "AI Automation (n8n)",
-    "Android Studio",
-    "React Native",
-    "Xcode",
+    "Redux",
     "Firebase",
+    "Android",
+    "Material UI",
+    "Chakra UI",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Sass",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "TypeScript",
+    "Next.js",
+    "Java",
+    "Kotlin",
+    "PHP",
+    "Python",
+    "C++",
+    "MongoDB",
+    "MySQL",
+    "PostgreSQL",
+    "AWS",
+    "Heroku",
   ],
+  education: [
+    {
+      degree: "Bachelor of Science in",
+      field: "Information Technology",
+      school: "Holy Cross of Davao College",
+      period: "2011 - 2015",
+      imageSrc: "/images/holy-cross-of-davao-college.png",
+      imageAlt: "Holy Cross of Davao College",
+    },
+  ] satisfies EducationItem[],
   projects: [
     {
       title: "Project One",
