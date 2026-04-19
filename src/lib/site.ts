@@ -9,6 +9,8 @@ export type Project = {
   tags: string[];
   imageSrc?: string;
   imageAlt?: string;
+  /** Internal case study URL: `/projects/{slug}` */
+  slug?: string;
   href?: string;
   repoHref?: string;
 };
@@ -82,6 +84,72 @@ export const site = {
   ] satisfies EducationItem[],
   projects: [
     {
+      title: "Stylerbox",
+      description:
+        "Patented UVC sterilizing smart hair appliance organizer with auto shut-off, optional touchscreen, and a revenue-generating Stylerbox app.",
+      tags: ["Hardware", "UVC sterilization", "Smart display", "Product"],
+      imageSrc: "/images/projects/stylerbox-hero.png",
+      imageAlt:
+        "Stylerbox wall-mounted unit with hair tools and illuminated display",
+      slug: "stylerbox",
+      href: "https://stylerbox.com",
+    },
+    {
+      title: "Deletely",
+      description:
+        "Hands-on removal of negative reviews for Australian real estate agencies—protect your reputation and your business.",
+      tags: ["Real estate", "Reputation", "Australia", "Web"],
+      imageSrc: "/images/projects/deletely-hero.png",
+      imageAlt:
+        "Deletely homepage with maroon hero and remove negative reviews messaging",
+      slug: "deletely",
+      href: "https://deletely.com.au",
+    },
+    {
+      title: "Prokrate",
+      description:
+        "E-commerce for coffee equipment—machines, grinders, beans, sauces, and barista tools for enthusiasts and businesses.",
+      tags: ["E-commerce", "Coffee", "Retail", "B2B"],
+      imageSrc: "/images/projects/prokrate-hero.png",
+      imageAlt:
+        "Prokrate storefront hero with professional espresso machine",
+      slug: "prokrate",
+      href: "https://prokrate.com",
+    },
+    {
+      title: "La Banca Cruises",
+      description:
+        "Yacht rentals—private charters and shared cruises in Subic for groups from 1 to 60 guests.",
+      tags: ["Travel", "Yacht charter", "Subic", "Bubble"],
+      imageSrc: "/images/projects/labanca-hero.png",
+      imageAlt:
+        "La Banca Cruises gallery page with yachts and Unforgettable Experiences banner",
+      slug: "labanca",
+      href: "https://labancayachtour-36644.bubbleapps.io",
+    },
+    {
+      title: "La Banca Bookings",
+      description:
+        "Admin dashboard to manage yacht reservations—search, schedule, boats, payments, and booking status in one place.",
+      tags: ["Bubble", "Admin", "Bookings", "Operations"],
+      imageSrc: "/images/projects/labanca-bookings-hero.png",
+      imageAlt:
+        "La Banca Cruises admin Bookings page with reservation list and actions",
+      slug: "labanca-bookings",
+      href: "https://labancatravelsandtours-82856.bubbleapps.io",
+    },
+    {
+      title: "Shirwell Music",
+      description:
+        "Official artist hub for Shirwell Bancan—stream tracks, browse releases, and shop flowers in a gold-on-black mobile experience.",
+      tags: ["Music", "Artist", "E-commerce", "Mobile"],
+      imageSrc: "/images/projects/shirwell-music-hero.png",
+      imageAlt:
+        "Shirwell Music mobile app with hero, Explore Music and Shop Flowers CTAs, and player bar",
+      slug: "shirwell-music",
+      href: "https://shirwel.com",
+    },
+    {
       title: "Project One",
       description:
         "A production-ready app with authentication, dashboards, and a clean design system.",
@@ -137,4 +205,11 @@ export const site = {
     },
   ] satisfies ExperienceItem[],
 } as const;
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  for (const p of site.projects) {
+    if (p.slug === slug) return p;
+  }
+  return undefined;
+}
 

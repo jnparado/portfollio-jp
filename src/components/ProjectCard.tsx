@@ -1,5 +1,6 @@
 import { Project } from "@/lib/site";
 import Image from "next/image";
+import Link from "next/link";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -19,7 +20,13 @@ export function ProjectCard({ project }: { project: Project }) {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
 
-        {project.href ? (
+        {project.slug ? (
+          <Link
+            href={`/projects/${project.slug}`}
+            aria-label={`View ${project.title} project`}
+            className="absolute inset-0"
+          />
+        ) : project.href ? (
           <a
             href={project.href}
             target="_blank"
