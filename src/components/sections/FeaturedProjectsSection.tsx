@@ -9,6 +9,26 @@ function RocketIcon() {
   );
 }
 
+function BulletDotIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 12 12"
+      aria-hidden="true"
+      className={className ?? "mt-2 size-3 shrink-0"}
+    >
+      <defs>
+        <radialGradient id="bulletGlowFeatured" cx="50%" cy="40%" r="70%">
+          <stop offset="0%" stopColor="#FDE68A" stopOpacity="1" />
+          <stop offset="55%" stopColor="#F59E0B" stopOpacity="0.95" />
+          <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.15" />
+        </radialGradient>
+      </defs>
+      <circle cx="6" cy="6" r="4.6" fill="url(#bulletGlowFeatured)" />
+      <circle cx="6" cy="6" r="2.2" fill="#FBBF24" />
+    </svg>
+  );
+}
+
 export function FeaturedProjectsSection() {
   const items = site.featuredProjects ?? [];
   if (items.length === 0) return null;
@@ -40,7 +60,7 @@ export function FeaturedProjectsSection() {
                 <ul className="mt-3 space-y-1.5">
                   {p.bullets.map((b) => (
                     <li key={b} className="flex gap-3">
-                      <span aria-hidden="true" className="mt-2 size-1.5 rounded-full bg-amber-400" />
+                      <BulletDotIcon className="mt-2 size-3 shrink-0" />
                       <span>{b}</span>
                     </li>
                   ))}

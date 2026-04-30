@@ -1,5 +1,8 @@
+"use client";
+
 import { site } from "@/lib/site";
 import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
 
 function SocialIcon({ label }: { label: string }) {
   // Minimal inline icons to avoid adding deps.
@@ -36,6 +39,46 @@ function SocialIcon({ label }: { label: string }) {
 
 export function HeroSection() {
   const firstName = site.name.split(" ")[0] ?? site.name;
+  const roles = useMemo(
+    () => ["Full-stack Developer", "Mobile Developer", "Bubble Developer"],
+    [],
+  );
+  const [roleIdx, setRoleIdx] = useState(0);
+  const [typed, setTyped] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const fullText = roles[roleIdx] ?? "";
+    const doneTyping = typed === fullText;
+    const doneDeleting = typed === "";
+
+    const nextDelayMs = isDeleting ? 40 : 55;
+    const pauseMs = doneTyping ? 900 : doneDeleting && isDeleting ? 250 : 0;
+
+    const t = window.setTimeout(
+      () => {
+        if (!isDeleting) {
+          if (doneTyping) {
+            setIsDeleting(true);
+            return;
+          }
+          setTyped(fullText.slice(0, typed.length + 1));
+          return;
+        }
+
+        if (doneDeleting) {
+          setIsDeleting(false);
+          setRoleIdx((v) => (v + 1) % roles.length);
+          return;
+        }
+
+        setTyped(fullText.slice(0, Math.max(0, typed.length - 1)));
+      },
+      pauseMs || nextDelayMs,
+    );
+
+    return () => window.clearTimeout(t);
+  }, [isDeleting, roleIdx, roles, typed]);
 
   return (
     <div id="home" className="relative py-14 sm:py-20 scroll-mt-24">
@@ -119,8 +162,13 @@ export function HeroSection() {
 
             <p className="max-w-2xl text-lg font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-xl">
               I Am Into{" "}
-              <span className="text-rose-600 dark:text-rose-400">{site.role}</span>{" "}
-              <span className="text-zinc-950/70 dark:text-white/70">|</span>
+              <span className="text-rose-600 dark:text-rose-400">{typed}</span>{" "}
+              <span
+                className="text-zinc-950/70 dark:text-white/70 motion-safe:animate-pulse"
+                aria-hidden="true"
+              >
+                |
+              </span>
             </p>
           </div>
 

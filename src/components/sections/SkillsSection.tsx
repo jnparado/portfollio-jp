@@ -1,6 +1,26 @@
 import { Section } from "@/components/Section";
 import { site } from "@/lib/site";
 
+function BulletDotIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 12 12"
+      aria-hidden="true"
+      className={className ?? "mt-2 size-3 shrink-0"}
+    >
+      <defs>
+        <radialGradient id="bulletGlow" cx="50%" cy="40%" r="70%">
+          <stop offset="0%" stopColor="#FDE68A" stopOpacity="1" />
+          <stop offset="55%" stopColor="#F59E0B" stopOpacity="0.95" />
+          <stop offset="100%" stopColor="#F59E0B" stopOpacity="0.15" />
+        </radialGradient>
+      </defs>
+      <circle cx="6" cy="6" r="4.6" fill="url(#bulletGlow)" />
+      <circle cx="6" cy="6" r="2.2" fill="#FBBF24" />
+    </svg>
+  );
+}
+
 function SkillIcon({ label }: { label: string }) {
   // Minimal inline icons to avoid adding deps.
   if (label === "React") {
@@ -174,7 +194,7 @@ export function SkillsSection() {
                   <ul className="mt-3 space-y-2 text-sm leading-6 text-white/75">
                     {group.items.map((i) => (
                       <li key={i} className="flex gap-2">
-                        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-amber-400" />
+                        <BulletDotIcon className="mt-2 size-3 shrink-0" />
                         <span>{i}</span>
                       </li>
                     ))}
