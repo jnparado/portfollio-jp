@@ -24,6 +24,17 @@ export type EducationItem = {
   imageAlt: string;
 };
 
+export type SkillGroup = {
+  label: string;
+  items: string[];
+};
+
+export type FeaturedProject = {
+  title: string;
+  bullets: string[];
+  tech: string;
+};
+
 export type ExperienceItem = {
   company: string;
   role: string;
@@ -37,7 +48,7 @@ export const site = {
   role: "Full‑stack Developer",
   location: "City, Country",
   summary:
-    "I build fast, accessible web apps with great UX. I care about clean architecture, performance, and details.",
+    "I build full-stack and AI-powered applications including booking systems, chatbots, and automation tools. I specialize in integrating APIs, designing scalable workflows, and solving real business problems using modern technologies.",
   phone: "+639639493290",
   email: "paradojeson@gmail.com",
   address: "Davao City, Philippines",
@@ -47,19 +58,54 @@ export const site = {
     { label: "Resume", href: "/resume.pdf" },
   ] satisfies SocialLink[],
   skills: [
-    "TypeScript",
-    "JavaScript",
     "React",
     "Next.js",
     "Tailwind CSS",
-    "Supabase",
+    "Node.js",
     "PostgreSQL",
-    "REST APIs",
-    "API Integration",
-    "Git",
+    "Supabase",
+    "React Native",
+    "Spring Boot",
+    "Bubble.io",
+    "OpenAI API",
+    "GitHub",
+    "Vercel",
+    "Webhooks",
     "CI/CD",
-    "AI-assisted development",
   ],
+  skillGroups: [
+    { label: "Frontend", items: ["React", "Next.js", "Tailwind CSS (responsive, high-performance UI)"] },
+    { label: "Backend", items: ["Node.js", "Spring Boot (REST APIs, scalable backend architecture)"] },
+    { label: "Mobile Development", items: ["React Native", "iOS (Xcode)", "Android (Kotlin, Jetpack Compose)"] },
+    { label: "Database", items: ["PostgreSQL", "Supabase (schema design, query optimization)"] },
+    { label: "AI & Automation", items: ["OpenAI API", "AI-driven workflows", "Prompt engineering"] },
+    { label: "No-Code / Low-Code", items: ["Bubble.io (rapid full-stack development, automation systems)"] },
+    { label: "Tools & DevOps", items: ["GitHub", "Vercel", "Cursor", "CI/CD basics", "REST APIs", "Webhooks"] },
+  ] satisfies SkillGroup[],
+  featuredProjects: [
+    {
+      title: "AI Document Verification System",
+      bullets: [
+        "Extracts data from PDFs using OpenAI Vision",
+        "Validates insurance certificates",
+      ],
+      tech: "OpenAI, API, Backend logic",
+    },
+    {
+      title: "Yacht Booking Platform",
+      bullets: [
+        "Dynamic scheduling system",
+        "Real-time availability logic",
+        "Built full-stack",
+      ],
+      tech: "Bubble.io, Xano, Stripe, Mapbox",
+    },
+    {
+      title: "AI Chatbot App",
+      bullets: ["Spring Boot backend", "Kotlin mobile frontend"],
+      tech: "Spring Boot, Kotlin, OpenAI API",
+    },
+  ] satisfies FeaturedProject[],
   education: [
     {
       degree: "Bachelor of Science in",

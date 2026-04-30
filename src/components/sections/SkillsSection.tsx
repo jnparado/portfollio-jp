@@ -46,6 +46,43 @@ function SkillIcon({ label }: { label: string }) {
     );
   }
 
+  if (label === "Supabase" || label === "PostgreSQL") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="size-7 fill-none">
+        <path
+          d="M7.5 4.5h9a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-9a2 2 0 0 1-2-2v-11a2 2 0 0 1 2-2Z"
+          className="stroke-violet-200"
+          strokeWidth="1.6"
+        />
+        <path
+          d="M8 8h8M8 12h8M8 16h5"
+          className="stroke-violet-200"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (label === "GitHub" || label === "Vercel" || label === "CI/CD") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="size-7 fill-none">
+        <path
+          d="M8 14.5 10.2 17 16 10"
+          className="stroke-lime-200"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M12 3.8c4.5 0 8.2 3.7 8.2 8.2S16.5 20.2 12 20.2 3.8 16.5 3.8 12 7.5 3.8 12 3.8Z"
+          className="stroke-lime-200"
+          strokeWidth="1.6"
+        />
+      </svg>
+    );
+  }
+
   if (label === "JavaScript" || label === "TypeScript") {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="size-7 fill-none">
@@ -123,6 +160,29 @@ export function SkillsSection() {
               </li>
             ))}
           </ul>
+
+          {site.skillGroups?.length ? (
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {site.skillGroups.map((group) => (
+                <div
+                  key={group.label}
+                  className="rounded-2xl border border-white/10 bg-black/30 p-5 ring-1 ring-white/5"
+                >
+                  <p className="text-sm font-extrabold tracking-tight text-white">
+                    {group.label}
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm leading-6 text-white/75">
+                    {group.items.map((i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-amber-400" />
+                        <span>{i}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </Section>

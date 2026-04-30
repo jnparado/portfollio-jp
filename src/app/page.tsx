@@ -3,6 +3,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { EducationSection } from "@/components/sections/EducationSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
+import { FeaturedProjectsSection } from "@/components/sections/FeaturedProjectsSection";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Section } from "@/components/Section";
 import { site } from "@/lib/site";
@@ -32,6 +33,10 @@ export default function Home() {
         </AnimatedInView>
 
         <AnimatedInView delayMs={120}>
+          <FeaturedProjectsSection />
+        </AnimatedInView>
+
+        <AnimatedInView delayMs={140}>
         <Section id="projects" title="">
           <div className="mb-8 flex items-center justify-center gap-3 text-center">
             <span className="grid size-10 place-items-center rounded-xl bg-white/5 text-white ring-1 ring-white/10">
@@ -52,11 +57,11 @@ export default function Home() {
         </Section>
         </AnimatedInView>
 
-        <AnimatedInView delayMs={140}>
+        <AnimatedInView delayMs={160}>
           <ExperienceSection />
         </AnimatedInView>
 
-        <AnimatedInView delayMs={160}>
+        <AnimatedInView delayMs={180}>
           <ContactSection />
         </AnimatedInView>
       </Container>
