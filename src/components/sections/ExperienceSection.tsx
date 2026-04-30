@@ -58,11 +58,6 @@ export function ExperienceSection() {
                     <div className="hidden md:block" />
                   )}
                 </div>
-
-                {/* Mobile: always show card full width */}
-                <div className="md:hidden">
-                  <Card item={item} side="right" />
-                </div>
               </li>
             );
           })}
@@ -76,13 +71,13 @@ function Card({
   item,
   side,
 }: {
-  item: { company: string; role: string; period: string };
+  item: { company: string; role: string; period: string; bullets?: string[] };
   side: "left" | "right";
 }) {
   return (
     <div
       className={[
-        "relative ml-10 rounded-xl bg-white px-5 py-4 text-red-700 shadow-[0_18px_55px_-35px_rgba(0,0,0,0.65)] ring-1 ring-black/10 md:ml-0 md:max-w-[420px] dark:bg-white dark:text-red-700 dark:ring-white/10",
+        "relative ml-10 rounded-xl bg-white px-5 py-4 text-zinc-900 shadow-[0_18px_55px_-35px_rgba(0,0,0,0.65)] ring-1 ring-black/10 md:ml-0 md:max-w-[520px] dark:bg-zinc-950 dark:text-zinc-50 dark:ring-white/10",
         side === "left" ? "md:mr-10" : "md:ml-10",
       ].join(" ")}
     >
@@ -90,14 +85,26 @@ function Card({
       <div
         aria-hidden="true"
         className={[
-          "absolute top-6 h-3 w-3 rotate-45 bg-white ring-1 ring-black/10 dark:ring-white/10",
+          "absolute top-6 h-3 w-3 rotate-45 bg-white ring-1 ring-black/10 dark:bg-zinc-950 dark:ring-white/10",
           side === "left" ? "-right-1.5 md:-right-1.5" : "-left-1.5 md:-left-1.5",
         ].join(" ")}
       />
 
-      <p className="text-sm font-extrabold text-red-700">{item.company}</p>
-      <p className="mt-0.5 text-sm font-semibold text-red-700">{item.role}</p>
-      <p className="mt-2 text-xs font-semibold text-red-600">{item.period}</p>
+      <p className="text-sm font-extrabold tracking-tight">{item.company}</p>
+      <p className="mt-0.5 text-sm font-semibold text-zinc-700 dark:text-zinc-200">
+        {item.role}
+      </p>
+      <p className="mt-2 text-xs font-semibold text-zinc-500 dark:text-zinc-400">
+        {item.period}
+      </p>
+
+      {item.bullets?.length ? (
+        <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+          {item.bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   );
 }
