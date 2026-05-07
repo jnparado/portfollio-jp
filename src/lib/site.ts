@@ -194,6 +194,22 @@ export const site = {
       slug: "nexus-medpro",
     },
     {
+      title: "MyHiredito",
+      description:
+        "Online jobs marketplace where workers apply to opportunities and businesses hire vetted freelancers—browse by category, message, and get paid securely on one platform.",
+      tags: [
+        "Marketplace",
+        "Jobs",
+        "Freelancers",
+        "Hiring",
+        "Web",
+      ],
+      imageSrc: "/images/projects/myhiredito-hero.png",
+      imageAlt:
+        "MyHiredito hero with Recruit the talent you need without the stress headline and notification cards",
+      slug: "myhiredito",
+    },
+    {
       title: "Project One",
       description:
         "A production-ready app with authentication, dashboards, and a clean design system.",

@@ -259,6 +259,80 @@ export default async function ProjectDetailPage({ params }: Props) {
                   clean, accessible UI that works well on both mobile and desktop.
                 </p>
               </>
+            ) : slug === "myhiredito" ? (
+              <>
+                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
+                  MyHiredito is an online jobs platform where workers can apply to
+                  real opportunities and businesses can hire vetted freelancers in
+                  one friendly place. The product positions itself with a clear
+                  promise—<em>“Recruit the talent you need, without the stress.”</em>—and
+                  pairs hiring tools, payments, and messaging in a single flow.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Two sides, one platform
+                </h3>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>
+                    <strong>Workers / freelancers</strong> — create a profile, browse
+                    open jobs, apply with a single click, message employers, and get
+                    paid via secure milestones.
+                  </li>
+                  <li>
+                    <strong>Businesses / clients</strong> — post roles, review
+                    matched candidates, shortlist talent, run interviews, and
+                    release payments on milestone completion.
+                  </li>
+                </ul>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Worker application flow
+                </h3>
+                <p>
+                  Workers move quickly from discovery to offer: filter jobs by
+                  category, role, and rate, submit a tailored application with one
+                  CTA (<strong>Find jobs</strong>), and track status from
+                  applied → shortlisted → hired. Notifications surface offers,
+                  payments, and recommended matches in real time so candidates can
+                  respond fast.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Browse top talent by category
+                </h3>
+                <p>
+                  Hiring is organized around clear, high-intent categories so
+                  clients can find people who can deliver immediately:
+                </p>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>Web, Mobile & Software — build apps and ship features</li>
+                  <li>Design & Creative — UI/UX, branding, illustration</li>
+                  <li>Writing — copywriting, blogs, technical docs</li>
+                  <li>Sales — prospecting, outreach, account support</li>
+                  <li>Admin Support — research, organization, operations</li>
+                  <li>Customer Service — support teams customers love</li>
+                </ul>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Built-in trust & payments
+                </h3>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>Verified profiles and reviews</li>
+                  <li>Secure milestone-based payments (e.g. “You received $500 for milestone completion”)</li>
+                  <li>Easy in-app messaging between workers and clients</li>
+                  <li>Recommended matches based on role and skills</li>
+                </ul>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Outcome
+                </h3>
+                <p>
+                  MyHiredito turns hiring into a low-friction, end-to-end loop:
+                  workers get a fast path from “apply” to “paid,” and businesses
+                  get vetted freelancers and tooling to manage the relationship
+                  without juggling multiple apps.
+                </p>
+              </>
             ) : (
               <p className="text-lg text-zinc-950 dark:text-zinc-50">
                 {project.description}
