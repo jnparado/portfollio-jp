@@ -184,6 +184,16 @@ export const site = {
       href: "https://shirwel.com",
     },
     {
+      title: "Nexus MedPro",
+      description:
+        "Healthcare staffing portal with an AI-assisted worker application flow—Grok-powered document parsing and Mapbox-based location matching to connect professionals with shifts.",
+      tags: ["Healthcare", "AI", "Grok", "Mapbox", "Onboarding", "Web"],
+      imageSrc: "/images/projects/nexus-medpro-hero.png",
+      imageAlt:
+        "Nexus MedPro Join page with Start Application CTA and Connecting Healthcare professionals with service providers tagline",
+      slug: "nexus-medpro",
+    },
+    {
       title: "Project One",
       description:
         "A production-ready app with authentication, dashboards, and a clean design system.",

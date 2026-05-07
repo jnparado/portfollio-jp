@@ -197,6 +197,68 @@ export default async function ProjectDetailPage({ params }: Props) {
                   and membership-style value in one cohesive flow.
                 </p>
               </>
+            ) : slug === "nexus-medpro" ? (
+              <>
+                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
+                  Nexus MedPro Staffing connects healthcare professionals with
+                  service providers through a streamlined, AI-assisted worker
+                  application flow. The landing experience leads with a single
+                  high-intent action—“Start Application”—to keep onboarding fast,
+                  focused, and friction-free.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Worker application process
+                </h3>
+                <p>
+                  Applicants move through a guided, step-by-step intake: account
+                  creation, profile and credential capture, document uploads, shift
+                  preferences, and review/submission. Form state is preserved
+                  between steps so users can pick up where they left off, with
+                  clear validation and progress indicators along the way.
+                </p>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>Account & sign-in (with returning user path)</li>
+                  <li>Personal info and credentialing details</li>
+                  <li>Document uploads (IDs, licenses, certifications)</li>
+                  <li>Shift availability, pay, and location preferences</li>
+                  <li>Review and submit, then status tracking</li>
+                </ul>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  AI parsing with Grok
+                </h3>
+                <p>
+                  Uploaded documents are parsed by an AI pipeline backed by Grok
+                  to automatically extract structured data—names, license numbers,
+                  expiration dates, certifications, and other key fields. Extracted
+                  values are mapped onto the application form so workers don’t
+                  retype information that’s already on their documents, and the
+                  system flags inconsistencies (e.g., expired licenses or
+                  mismatched names) for quick correction.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Location matching with Mapbox
+                </h3>
+                <p>
+                  Mapbox powers address autocomplete, geocoding, and distance
+                  awareness across the portal. Workers can specify how far they’re
+                  willing to travel, and shifts are matched and sorted by proximity
+                  to their saved locations—improving fill rates for providers and
+                  surfacing relevant opportunities for candidates first.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Outcome
+                </h3>
+                <p>
+                  The result is a healthcare staffing experience that feels lighter
+                  than traditional onboarding: less manual data entry through AI
+                  parsing, faster decisions through location-aware matching, and a
+                  clean, accessible UI that works well on both mobile and desktop.
+                </p>
+              </>
             ) : (
               <p className="text-lg text-zinc-950 dark:text-zinc-50">
                 {project.description}
