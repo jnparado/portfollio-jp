@@ -255,7 +255,7 @@ export const site = {
     },
     {
       company: "Conserva Care LLC",
-      role: "Web Developer",
+      role: "Full Stack Developerr",
       period: "March 2024 - November 2024",
       bullets: [
         "Strong understanding of Bubble’s editor, data architecture, workflows, responsive design, and plugin ecosystem",
@@ -278,7 +278,7 @@ export const site = {
     },
     {
       company: "MVP.Dev",
-      role: "Bubble Developer",
+      role: "Full Stack Developer",
       period: "February 2022 - April 2023",
       bullets: [
         "Designed, developed, and delivered applications on the Bubble.io platform",
@@ -304,7 +304,7 @@ export const site = {
     },
     {
       company: "One Corp",
-      role: "Backend Developer",
+      role: "Full Stack Developer",
       period: "August 2016 - December 2019",
       bullets: [
         "Assigned to application development and maintenance; owned major modules end-to-end",
