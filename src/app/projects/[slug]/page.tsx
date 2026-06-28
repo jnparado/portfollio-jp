@@ -333,7 +333,96 @@ export default async function ProjectDetailPage({ params }: Props) {
                   without juggling multiple apps.
                 </p>
               </>
-            ) : (
+              
+            ) :  slug === "best-coast-tours" ? (
+              <>
+                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
+                  Best Coast Tours is a smart travel and booking platform that helps travelers
+                  discover, customize, and reserve unforgettable tour experiences across
+                  Southern California. The platform simplifies trip planning by combining
+                  tour selection, booking management, and cost computation into one seamless
+                  experience.
+                </p>
+            
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Two sides, one booking platform
+                </h3>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>
+                    <strong>Travelers / Customers</strong> — browse tour packages, choose
+                    destinations, customize itineraries, select pickup locations, and book
+                    tours with instant pricing.
+                  </li>
+                  <li>
+                    <strong>Admin / Tour Operators</strong> — manage bookings, calculate trip
+                    costs, assign vehicles, monitor schedules, and optimize tour operations.
+                  </li>
+                </ul>
+            
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Customer booking flow
+                </h3>
+                <p>
+                  Travelers can quickly move from browsing to booking by selecting a tour,
+                  entering trip details, choosing pickup preferences, and confirming
+                  reservations. The platform provides transparent pricing and booking
+                  summaries so customers can confidently plan their trip.
+                </p>
+            
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Explore tours by category
+                </h3>
+                <p>
+                  Tour experiences are organized into curated categories, helping customers
+                  find the perfect getaway based on interests and travel style:
+                </p>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>City Tours — explore iconic landmarks and attractions</li>
+                  <li>Coastal Tours — scenic beaches, harbors, and ocean experiences</li>
+                  <li>Wine Tours — curated vineyard and tasting experiences</li>
+                  <li>Private Group Tours — customized itineraries for families or teams</li>
+                  <li>Luxury Tours — premium transport and VIP experiences</li>
+                </ul>
+            
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Intelligent booking & cost calculation
+                </h3>
+                <p>
+                  The admin dashboard includes a powerful pricing engine that automatically
+                  calculates total booking cost based on multiple variables such as tour
+                  package, guest count, travel distance, vehicle type, and optional add-ons.
+                  This ensures accurate quotations and streamlined booking management.
+                </p>
+            
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>Automatic distance and route-based cost computation</li>
+                  <li>Dynamic pricing based on guest count and vehicle assignment</li>
+                  <li>Add-on pricing for extras like private pickup or special stops</li>
+                  <li>Booking status tracking and schedule management</li>
+                </ul>
+            
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Admin operations dashboard
+                </h3>
+                <p>
+                  Tour operators can monitor reservations, manage daily schedules, update
+                  pricing rules, and analyze operational profitability from a centralized
+                  dashboard. This reduces manual coordination and improves efficiency across
+                  the business.
+                </p>
+            
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Outcome
+                </h3>
+                <p>
+                  Best Coast Tours transforms traditional tour booking into a modern digital
+                  experience. Customers enjoy a frictionless booking journey, while tour
+                  operators gain powerful tools for cost optimization, scheduling, and
+                  revenue management—all within a single platform.
+                </p>
+              </>
+            ) :
+            (       
               <p className="text-lg text-zinc-950 dark:text-zinc-50">
                 {project.description}
               </p>
@@ -343,5 +432,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       </Container>
     </div>
   );
+
+
 }
  
