@@ -54,7 +54,7 @@ export const site = {
   address: "Davao City, Philippines",
   socials: [
     { label: "GitHub", href: "https://github.com/jnparado" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/your-handle/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/jeson-parado-4362611a6/" },
     { label: "Resume", href: "/resume.pdf" },
   ] satisfies SocialLink[],
   skills: [
