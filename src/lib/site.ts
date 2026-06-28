@@ -231,7 +231,7 @@ export const site = {
       description:
         "A production-ready app with authentication, dashboards, and a clean design system.",
       tags: ["Next.js", "TypeScript", "Postgres"],
-      imageSrc: "/images/projects/project-one.svg",
+      imageSrc: "/images/projects/laybare.jpeg",
       imageAlt: "Project One preview",
       href: "https://lay-bare.com",
       repoHref: "https://github.com/your-handle/project-one",
