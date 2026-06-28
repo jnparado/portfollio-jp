@@ -237,16 +237,32 @@ export const site = {
       repoHref: "https://github.com/your-handle/project-one",
     },
     {
-      title: "Laybare",
+      title: "mwell-ios",
       description:
-        "A production-ready app with authentication, dashboards, and a clean design system.",
-      tags: ["Next.js", "TypeScript", "Postgres"],
-      imageSrc: "/images/projects/project-one.svg",
-      imageAlt: "Project One preview",
-      href: "https://example.com",
+        "Healthcare mobile application for iOS featuring telemedicine, wellness tracking, medical records management, and digital health services.",
+      tags: [
+        "Sign Up / Login",
+        "OTP Verification",
+        "Face ID",
+        "Health Dashboard",
+        "Telemedicine",
+        "Doctor Consultation",
+        "Specialist Booking",
+        "Video Consultation",
+        "Medical Records",
+        "Wellness Tracking",
+        "Apple HealthKit",
+        "Fitness Programs",
+        "Mental Wellness",
+        "Lab Test Booking",
+        "Pharmacy Ordering",
+        "Push Notifications"
+      ],
+      imageSrc: "/images/projects/mwell-ios.jpg",
+      imageAlt: "mWell iOS app preview showing healthcare dashboard and telemedicine features",
+      href: "https://www.mwell.com.ph/",
       repoHref: "https://github.com/your-handle/project-one",
-    },
- 
+    }
 
   ] satisfies Project[],
   experience: [
