@@ -224,22 +224,6 @@ export const site = {
       imageAlt:
         "Best Coast Tours dashboard showing tour booking, itinerary planning, and booking cost calculation",
       slug: "best-coast-tours",
-    },
-    {
-      title: "Best Coast Tours",
-      description:
-        "Smart travel booking platform where customers explore curated tours, customize itineraries, and book seamless travel experiences while admins manage bookings, schedules, and dynamic cost calculations.",
-      tags: [
-        "Travel",
-        "Booking",
-        "Tours",
-        "Admin Dashboard",
-        "Web",
-      ],
-      imageSrc: "/images/projects/bestcoasttours-logo.jpg",
-      imageAlt:
-        "Best Coast Tours dashboard showing tour booking, itinerary planning, and booking cost calculation",
-      slug: "best-coast-tours",
       href: "https://bestcoasttours.com/",
     },
     {
