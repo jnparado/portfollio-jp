@@ -258,7 +258,7 @@ export const site = {
         "Pharmacy Ordering",
         "Push Notifications"
       ],
-      imageSrc: "/images/projects/mwell-ios.jpg",
+      imageSrc: "/images/projects/mwell.jpg",
       imageAlt: "mWell iOS app preview showing healthcare dashboard and telemedicine features",
       href: "https://www.mwell.com.ph/",
       repoHref: "https://github.com/your-handle/project-one",
