@@ -225,6 +225,23 @@ export const site = {
         "Best Coast Tours dashboard showing tour booking, itinerary planning, and booking cost calculation",
       slug: "best-coast-tours",
     },
+    {
+      title: "Best Coast Tours",
+      description:
+        "Smart travel booking platform where customers explore curated tours, customize itineraries, and book seamless travel experiences while admins manage bookings, schedules, and dynamic cost calculations.",
+      tags: [
+        "Travel",
+        "Booking",
+        "Tours",
+        "Admin Dashboard",
+        "Web",
+      ],
+      imageSrc: "/images/projects/bestcoasttours-logo.jpg",
+      imageAlt:
+        "Best Coast Tours dashboard showing tour booking, itinerary planning, and booking cost calculation",
+      slug: "best-coast-tours",
+      href: "https://bestcoasttours.com/",
+    },
 
     {
       title: "Project One",
@@ -236,23 +253,8 @@ export const site = {
       href: "https://example.com",
       repoHref: "https://github.com/your-handle/project-one",
     },
-    {
-      title: "Project Two",
-      description:
-        "A developer tool that speeds up workflows with thoughtful UX and fast performance.",
-      tags: ["React", "Tailwind", "DX"],
-      imageSrc: "/images/projects/project-two.svg",
-      imageAlt: "Project Two preview",
-      repoHref: "https://github.com/your-handle/project-two",
-    },
-    {
-      title: "Project Three",
-      description:
-        "An API + UI that focuses on reliability, observability, and maintainability.",
-      tags: ["Node.js", "API", "Testing"],
-      imageSrc: "/images/projects/project-three.svg",
-      imageAlt: "Project Three preview",
-    },
+ 
+
   ] satisfies Project[],
   experience: [
     {
