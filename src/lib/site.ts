@@ -242,9 +242,18 @@ export const site = {
       slug: "best-coast-tours",
       href: "https://bestcoasttours.com/",
     },
-
     {
-      title: "Project One",
+      title: "Laybare",
+      description:
+        "A production-ready app with authentication, dashboards, and a clean design system.",
+      tags: ["Next.js", "TypeScript", "Postgres"],
+      imageSrc: "/images/projects/project-one.svg",
+      imageAlt: "Project One preview",
+      href: "https://lay-bare.com",
+      repoHref: "https://github.com/your-handle/project-one",
+    },
+    {
+      title: "Laybare",
       description:
         "A production-ready app with authentication, dashboards, and a clean design system.",
       tags: ["Next.js", "TypeScript", "Postgres"],
