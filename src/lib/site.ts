@@ -220,7 +220,7 @@ export const site = {
         "Admin Dashboard",
         "Web",
       ],
-      imageSrc: "/images/projects/bestcoasttours-hero.png",
+      imageSrc: "/images/projects/bestcoasttours-logo.jpg",
       imageAlt:
         "Best Coast Tours dashboard showing tour booking, itinerary planning, and booking cost calculation",
       slug: "best-coast-tours",
