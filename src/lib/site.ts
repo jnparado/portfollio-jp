@@ -234,7 +234,7 @@ export const site = {
       imageSrc: "/images/projects/laybare.jpeg",
       imageAlt: "Project One preview",
       href: "https://lay-bare.com",
-      repoHref: "https://github.com/your-handle/project-one",
+      repoHref: "https://github.com/jnparado/lbo-ios",
     },
     {
       title: "mwell-ios",
