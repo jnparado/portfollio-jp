@@ -297,7 +297,7 @@ export const site = {
     {
       company: "DCBank",
       role: ".NET Developer",
-      period: "May 2023 - Feb 2024",
+      period: "June 2023- Feb 2024",
       bullets: [
         "Worked closely with database administrators and the rest of the development team to ensure system accuracy and performance",
         "Managed and maintained multiple applications including support, configuration, documentation, testing, upgrades, and change management processes",
@@ -321,11 +321,34 @@ export const site = {
       ],
     },
 
-    
+    {
+      company: "Core Proc.",
+      role: "iOS DEVELOPER - freelance",
+      period: "February 2022 – April 2022",
+      bullets: [
+        "Assigned to application development and maintenance",
+        "Led end-to-end development of an admin Android app: ordering system, inventory, and sales",
+        "Rechecked fixes and issues whenever updates were available",
+        "Analyzed data and validated compliance with existing industry practices",
+      ],
+    },
+
+    {
+      company: "Laybare.",
+      role: "iOS DEVELOPER - freelance",
+      period: "December 2021 - December 2022",
+      bullets: [
+        "Assigned to application development and maintenance",
+        "Led end-to-end development of an admin Android app: ordering system, inventory, and sales",
+        "Rechecked fixes and issues whenever updates were available",
+        "Analyzed data and validated compliance with existing industry practices",
+      ],
+    },
+
     {
       company: "Accenture Inc.",
       role: "Mobile Developer (iOS/Android)",
-      period: "May 03 2020 - December 15 2021",
+      period: "May 03 2020 - November 15 2021",
       bullets: [
         "Assigned to application development and maintenance",
         "Led end-to-end development of an admin Android app: ordering system, inventory, and sales",
