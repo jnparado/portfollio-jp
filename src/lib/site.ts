@@ -194,20 +194,21 @@ export const site = {
       slug: "nexus-medpro",
     },
     {
-      title: "MyHiredito",
-      description:
-        "Online jobs marketplace where workers apply to opportunities and businesses hire vetted freelancers—browse by category, message, and get paid securely on one platform.",
+      title: "Kama Shoetra",
+     description:
+     "AI-powered sneaker cleaning and restoration platform where customers book premium cleaning services, choose Pudo locker drop-offs, track orders in real time, and manage subscriptions, while admins oversee cleaning workflows, payments, and customer support.",
       tags: [
-        "Marketplace",
-        "Jobs",
-        "Freelancers",
-        "Hiring",
-        "Web",
-      ],
-      imageSrc: "/images/projects/myhiredito-hero.png",
-      imageAlt:
-        "MyHiredito hero with Recruit the talent you need without the stress headline and notification cards",
-      slug: "myhiredito",
+      "Sneaker Cleaning",
+     "Booking",
+  "Subscription",
+    "Admin Dashboard",
+   "Web App",
+   "AI"
+     ],
+  imageSrc: "/images/projects/shoe.jpg", 
+  imageAlt:
+  "Kama Shoetra dashboard showing sneaker service booking, order tracking, locker selection, and subscription management",
+
     },
     {
       title: "Best Coast Tours",
@@ -319,6 +320,8 @@ export const site = {
         "Created backend workflows for automated data exchange and synchronization between platforms",
       ],
     },
+
+    
     {
       company: "Accenture Inc.",
       role: "Mobile Developer (iOS/Android)",
