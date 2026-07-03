@@ -214,7 +214,7 @@ export function HeroSection() {
             <div className="absolute inset-3 rounded-full bg-white/70 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.35)] ring-1 ring-black/10 backdrop-blur dark:bg-black/40 dark:ring-white/10" />
             <div className="absolute inset-6 overflow-hidden rounded-full ring-1 ring-black/10 dark:ring-white/10">
               <Image
-                src="/images/jeson-parado.png"
+                src="/images/jp.jpg"
                 alt={site.name}
                 fill
                 sizes="(min-width: 1024px) 360px, 70vw"

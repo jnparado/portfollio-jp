@@ -181,7 +181,28 @@ export function SkillsSection() {
             ))}
           </ul>
 
-     
+          {site.skillGroups?.length ? (
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {site.skillGroups.map((group) => (
+                <div
+                  key={group.label}
+                  className="rounded-2xl border border-white/10 bg-black/30 p-5 ring-1 ring-white/5"
+                >
+                  <p className="text-sm font-extrabold tracking-tight text-white">
+                    {group.label}
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm leading-6 text-white/75">
+                    {group.items.map((i) => (
+                      <li key={i} className="flex gap-2">
+                        <BulletDotIcon className="mt-2 size-3 shrink-0" />
+                        <span>{i}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </Section>

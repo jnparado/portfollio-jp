@@ -79,9 +79,9 @@ export const site = {
     "Spring Boot",
     "Bubble.io",
     "Vertex AI",
-    "GoogleGemini",
     "OpenAI API",
     "Grok AI",
+    "Google Vertex AI",
     "ChatGPT",
     "Cursor",
     "Claude",
@@ -105,7 +105,15 @@ export const site = {
     "Webhooks",
     "CI/CD",
   ],
- 
+  skillGroups: [
+    { label: "Frontend", items: ["React", "Next.js", "Tailwind CSS (responsive, high-performance UI)"] },
+    { label: "Backend", items: ["Node.js", "Spring Boot (REST APIs, scalable backend architecture)"] },
+    { label: "Mobile Development", items: ["React Native", "iOS (Xcode)", "Android (Kotlin, Jetpack Compose)"] },
+    { label: "Database", items: ["PostgreSQL", "Supabase (schema design, query optimization)"] },
+    { label: "AI & Automation", items: ["OpenAI API", "AI-driven workflows", "Prompt engineering"] },
+    { label: "No-Code / Low-Code", items: ["Bubble.io (rapid full-stack development, automation systems)"] },
+    { label: "Tools & DevOps", items: ["GitHub", "Vercel", "Cursor", "CI/CD basics", "REST APIs", "Webhooks"] },
+  ] satisfies SkillGroup[],
   featuredProjects: [
     {
       title: "AI Document Verification System",
