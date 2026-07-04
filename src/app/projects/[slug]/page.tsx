@@ -59,7 +59,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               ))}
             </div>
             {project.href ? (
-              <p>
+              <p className="flex flex-wrap gap-3">
                 <a
                   href={project.href}
                   target="_blank"
@@ -67,6 +67,29 @@ export default async function ProjectDetailPage({ params }: Props) {
                   className="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-4 py-2.5 text-sm font-extrabold text-zinc-950 shadow-sm ring-1 ring-black/10 transition hover:bg-amber-300"
                 >
                   Visit website
+                  <span aria-hidden="true">↗</span>
+                </a>
+                {project.repoHref ? (
+                  <a
+                    href={project.repoHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-extrabold text-zinc-950 shadow-sm ring-1 ring-black/5 transition hover:bg-white/10 dark:text-zinc-50"
+                  >
+                    View code
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                ) : null}
+              </p>
+            ) : project.repoHref ? (
+              <p>
+                <a
+                  href={project.repoHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-4 py-2.5 text-sm font-extrabold text-zinc-950 shadow-sm ring-1 ring-black/10 transition hover:bg-amber-300"
+                >
+                  View code
                   <span aria-hidden="true">↗</span>
                 </a>
               </p>
@@ -257,6 +280,61 @@ export default async function ProjectDetailPage({ params }: Props) {
                   than traditional onboarding: less manual data entry through AI
                   parsing, faster decisions through location-aware matching, and a
                   clean, accessible UI that works well on both mobile and desktop.
+                </p>
+              </>
+            ) : slug === "pharma-inventory" ? (
+              <>
+                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
+                  PharmaStock is a pharmacy inventory management system built with
+                  Next.js, TypeScript, Tailwind CSS, and Supabase—designed to
+                  track medicines, batches, suppliers, and every stock movement
+                  from purchase to sale.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Core inventory features
+                </h3>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>Product catalog with SKU, category, unit, and reorder levels</li>
+                  <li>Supplier directory for distributor contacts and details</li>
+                  <li>Batch tracking on every stock-in with batch number, expiry, and pricing</li>
+                  <li>FEFO stock-out: dispensing deducts from the soonest-expiring batch first</li>
+                  <li>Full purchase and sales history for every inventory transaction</li>
+                </ul>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Dashboard & alerts
+                </h3>
+                <p>
+                  The dashboard surfaces low-stock alerts for products at or below
+                  their reorder level, plus an expiry monitor that groups batches
+                  into expired, ≤30 days, and ≤90 days—with suggested discounts
+                  for near-expiry stock and total value at risk.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Tech stack
+                </h3>
+                <p>
+                  Server actions handle CRUD and FEFO logic; Supabase powers
+                  persistence for products, categories, suppliers, batches, and
+                  transactions. Deployed on Vercel with environment-based Supabase
+                  configuration.
+                </p>
+              </>
+            ) : slug === "kamashoetra" ? (
+              <>
+                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
+                  Kama Shoetra is an AI-powered sneaker cleaning and restoration
+                  platform that connects customers with premium cleaning services—from
+                  booking and locker drop-offs to real-time order tracking and
+                  subscription management.
+                </p>
+                <p>
+                  Customers choose services, select Pudo locker locations for
+                  convenient drop-off and pickup, and follow orders through each
+                  stage of the cleaning workflow. Admins manage operations,
+                  payments, and support from a dedicated dashboard.
                 </p>
               </>
             ) : slug === "myhiredito" ? (

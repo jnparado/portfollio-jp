@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { ProjectCard } from "@/components/ProjectCard";
+import { FeaturedProjectsSection } from "@/components/sections/FeaturedProjectsSection";
 import { Section } from "@/components/Section";
 import { site } from "@/lib/site";
 
@@ -7,6 +8,8 @@ export default function ProjectsPage() {
   return (
     <div className="font-sans">
       <Container>
+        <FeaturedProjectsSection />
+
         <Section eyebrow="Selected work" title="Projects">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {site.projects.map((p) => (

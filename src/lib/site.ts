@@ -72,10 +72,10 @@ export const site = {
     'Python',
     "Next.js",
     "Tailwind CSS",
+    "TypeScript",
     "Node.js",
     "PostgreSQL",
     "Supabase",
-    "React Native",
     "Spring Boot",
     "Bubble.io",
     "Vertex AI",
@@ -92,7 +92,6 @@ export const site = {
     "Xano",
     "Mapbox",
     "Stripe",
-    "PayPal",
     "Webhooks",
     "CI/CD",
     "Docker",
@@ -102,8 +101,6 @@ export const site = {
     "Azure",
     "GitHub",
     "Vercel",
-    "Webhooks",
-    "CI/CD",
   ],
   skillGroups: [
     { label: "Frontend", items: ["React", "Next.js", "Tailwind CSS (responsive, high-performance UI)"] },
@@ -115,6 +112,15 @@ export const site = {
     { label: "Tools & DevOps", items: ["GitHub", "Vercel", "Cursor", "CI/CD basics", "REST APIs", "Webhooks"] },
   ] satisfies SkillGroup[],
   featuredProjects: [
+    {
+      title: "PharmaStock — Pharmacy Inventory",
+      bullets: [
+        "FEFO stock-out logic with batch and expiry tracking",
+        "Low-stock alerts and expiry monitor with discount suggestions",
+        "Full product, supplier, and transaction management",
+      ],
+      tech: "Next.js, TypeScript, Supabase, Tailwind CSS",
+    },
     {
       title: "AI Document Verification System",
       bullets: [
@@ -149,6 +155,17 @@ export const site = {
     },
   ] satisfies EducationItem[],
   projects: [
+    {
+      title: "PharmaStock",
+      description:
+        "Pharmacy inventory management system with batch tracking, FEFO dispensing, low-stock alerts, and an expiry monitor with discount suggestions for near-expiry stock.",
+      tags: ["Next.js", "TypeScript", "Supabase", "Inventory", "Healthcare"],
+      imageSrc: "/images/projects/project-three.svg",
+      imageAlt:
+        "PharmaStock pharmacy inventory dashboard with stock levels and expiry alerts",
+      slug: "pharma-inventory",
+      repoHref: "https://github.com/jnparado/pharma-inventory",
+    },
     {
       title: "Stylerbox",
       description:
@@ -227,20 +244,32 @@ export const site = {
     },
     {
       title: "Kama Shoetra",
-     description:
-     "AI-powered sneaker cleaning and restoration platform where customers book premium cleaning services, choose Pudo locker drop-offs, track orders in real time, and manage subscriptions, while admins oversee cleaning workflows, payments, and customer support.",
+      description:
+        "AI-powered sneaker cleaning and restoration platform where customers book premium cleaning services, choose Pudo locker drop-offs, track orders in real time, and manage subscriptions, while admins oversee cleaning workflows, payments, and customer support.",
       tags: [
-      "Sneaker Cleaning",
-     "Booking",
-  "Subscription",
-    "Admin Dashboard",
-   "Web App",
-   "AI"
-     ],
-  imageSrc: "/images/projects/shoe.jpg", 
-  imageAlt:
-  "Kama Shoetra dashboard showing sneaker service booking, order tracking, locker selection, and subscription management",
-
+        "Sneaker Cleaning",
+        "Booking",
+        "Subscription",
+        "Admin Dashboard",
+        "Web App",
+        "AI",
+      ],
+      imageSrc: "/images/projects/kamashoetra.png",
+      imageAlt:
+        "Kama Shoetra dashboard showing sneaker service booking, order tracking, locker selection, and subscription management",
+      slug: "kamashoetra",
+      repoHref: "https://github.com/jnparado/kamashoetra",
+    },
+    {
+      title: "MyHiredito",
+      description:
+        "Online jobs platform where workers apply to real opportunities and businesses hire vetted freelancers—with milestone payments, messaging, and category-based talent discovery in one flow.",
+      tags: ["Marketplace", "Jobs", "Payments", "Web App"],
+      imageSrc: "/images/projects/myhiredito-hero.png",
+      imageAlt:
+        "MyHiredito homepage with recruit talent messaging and job categories",
+      slug: "myhiredito",
+      repoHref: "https://github.com/jnparado/myhiredito",
     },
     {
       title: "Best Coast Tours",
@@ -294,14 +323,13 @@ export const site = {
       imageSrc: "/images/projects/mwell.jpg",
       imageAlt: "mWell iOS app preview showing healthcare dashboard and telemedicine features",
       href: "https://www.mwell.com.ph/",
-      repoHref: "https://github.com/your-handle/project-one",
-    }
-
+      repoHref: "https://github.com/jnparado/mwell-ios",
+    },
   ] satisfies Project[],
   experience: [
     {
       company: "Zipstaff inc",
-      role: "Full Stack Developer/Teach Lead",
+      role: "Full Stack Developer / Tech Lead",
       period: "December 2025 - April 2026",
       bullets: [
         "Developed worker application systems allowing users to easily apply for jobs via web and mobile",
@@ -316,7 +344,7 @@ export const site = {
     },
     {
       company: "Conserva Care LLC",
-      role: "Full Stack Developerr",
+      role: "Full Stack Developer",
       period: "March 2024 - November 2024",
       bullets: [
         "Strong understanding of Bubble’s editor, data architecture, workflows, responsive design, and plugin ecosystem",
