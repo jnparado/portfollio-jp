@@ -167,6 +167,18 @@ export const site = {
       repoHref: "https://github.com/jnparado/pharma-inventory",
     },
     {
+      title: "HR-recruitment-AI",
+      description:
+        "AI recruitment suite that screens resumes, ranks candidates against job descriptions, and runs first-round interviews—powered by Grok so hiring teams focus only on top matches.",
+      tags: ["Next.js", "Grok AI", "Recruitment", "AI", "HR"],
+      imageSrc: "/images/projects/hr-recruitment-ai-screening.png",
+      imageAlt:
+        "HR-recruitment-AI resume screening — job description input and resume upload",
+      slug: "hr-recruitment-ai",
+      href: "https://hr-recruitment-ai.vercel.app/",
+      repoHref: "https://github.com/jnparado/hr_recruitment_ai",
+    },
+    {
       title: "Stylerbox",
       description:
         "Patented UVC sterilizing smart hair appliance organizer with auto shut-off, optional touchscreen, and a revenue-generating Stylerbox app.",
@@ -259,17 +271,6 @@ export const site = {
         "Kama Shoetra dashboard showing sneaker service booking, order tracking, locker selection, and subscription management",
       slug: "kamashoetra",
       repoHref: "https://github.com/jnparado/kamashoetra",
-    },
-    {
-      title: "MyHiredito",
-      description:
-        "Online jobs platform where workers apply to real opportunities and businesses hire vetted freelancers—with milestone payments, messaging, and category-based talent discovery in one flow.",
-      tags: ["Marketplace", "Jobs", "Payments", "Web App"],
-      imageSrc: "/images/projects/myhiredito-hero.png",
-      imageAlt:
-        "MyHiredito homepage with recruit talent messaging and job categories",
-      slug: "myhiredito",
-      repoHref: "https://github.com/jnparado/myhiredito",
     },
     {
       title: "Best Coast Tours",

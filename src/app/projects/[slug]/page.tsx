@@ -282,6 +282,70 @@ export default async function ProjectDetailPage({ params }: Props) {
                   clean, accessible UI that works well on both mobile and desktop.
                 </p>
               </>
+            ) : slug === "hr-recruitment-ai" ? (
+              <>
+                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
+                  HR-recruitment-AI is an AI recruitment suite built with Next.js and
+                  Grok (xAI) that puts hiring on autopilot—screening resumes,
+                  ranking candidates, and running first-round interviews so
+                  teams only spend time on people worth meeting.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  AI Resume Screening
+                </h3>
+                <p>
+                  Recruiters upload a batch of resumes against a job description.
+                  Grok reads every PDF, DOCX, and TXT file, scores each candidate
+                  against the role (0–100), ranks the pool, and flags critical
+                  skill gaps—turning hundreds of applicants into a shortlist in
+                  minutes instead of days.
+                </p>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>Batch resume upload with job-description matching</li>
+                  <li>Automated candidate ranking and skill-gap detection</li>
+                  <li>Built for recruitment agencies, HR teams, and job marketplaces</li>
+                </ul>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  AI Interview Assistant
+                </h3>
+                <p>
+                  Grok conducts the first screening interview one question at a
+                  time—covering experience, skills, salary expectations, and
+                  availability—then delivers a candidate score and a clear
+                  advance/reject recommendation for the hiring manager.
+                </p>
+
+                <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-[0_22px_60px_-40px_rgba(0,0,0,0.85)]">
+                  <Image
+                    src="/images/projects/hr-recruitment-ai-interview.png"
+                    alt="HR-recruitment-AI interview assistant — candidate intake form"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(min-width: 1024px) 48rem, 100vw"
+                  />
+                </div>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Tech stack
+                </h3>
+                <p>
+                  The frontend and API routes are built with Next.js (App Router)
+                  and TypeScript. Grok powers all AI workflows—resume parsing,
+                  job matching, ranking logic, and conversational interviews.
+                  Deployed on Vercel at{" "}
+                  <a
+                    href="https://hr-recruitment-ai.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-semibold text-amber-600 underline decoration-amber-600/30 underline-offset-4 hover:decoration-amber-600/60 dark:text-amber-400 dark:decoration-amber-400/30 dark:hover:decoration-amber-400/60"
+                  >
+                    hr-recruitment-ai.vercel.app
+                  </a>
+                  .
+                </p>
+              </>
             ) : slug === "pharma-inventory" ? (
               <>
                 <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
@@ -337,82 +401,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                   payments, and support from a dedicated dashboard.
                 </p>
               </>
-            ) : slug === "myhiredito" ? (
-              <>
-                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
-                  MyHiredito is an online jobs platform where workers can apply to
-                  real opportunities and businesses can hire vetted freelancers in
-                  one friendly place. The product positions itself with a clear
-                  promise—<em>“Recruit the talent you need, without the stress.”</em>—and
-                  pairs hiring tools, payments, and messaging in a single flow.
-                </p>
-
-                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
-                  Two sides, one platform
-                </h3>
-                <ul className="ml-5 list-disc space-y-1.5">
-                  <li>
-                    <strong>Workers / freelancers</strong> — create a profile, browse
-                    open jobs, apply with a single click, message employers, and get
-                    paid via secure milestones.
-                  </li>
-                  <li>
-                    <strong>Businesses / clients</strong> — post roles, review
-                    matched candidates, shortlist talent, run interviews, and
-                    release payments on milestone completion.
-                  </li>
-                </ul>
-
-                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
-                  Worker application flow
-                </h3>
-                <p>
-                  Workers move quickly from discovery to offer: filter jobs by
-                  category, role, and rate, submit a tailored application with one
-                  CTA (<strong>Find jobs</strong>), and track status from
-                  applied → shortlisted → hired. Notifications surface offers,
-                  payments, and recommended matches in real time so candidates can
-                  respond fast.
-                </p>
-
-                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
-                  Browse top talent by category
-                </h3>
-                <p>
-                  Hiring is organized around clear, high-intent categories so
-                  clients can find people who can deliver immediately:
-                </p>
-                <ul className="ml-5 list-disc space-y-1.5">
-                  <li>Web, Mobile & Software — build apps and ship features</li>
-                  <li>Design & Creative — UI/UX, branding, illustration</li>
-                  <li>Writing — copywriting, blogs, technical docs</li>
-                  <li>Sales — prospecting, outreach, account support</li>
-                  <li>Admin Support — research, organization, operations</li>
-                  <li>Customer Service — support teams customers love</li>
-                </ul>
-
-                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
-                  Built-in trust & payments
-                </h3>
-                <ul className="ml-5 list-disc space-y-1.5">
-                  <li>Verified profiles and reviews</li>
-                  <li>Secure milestone-based payments (e.g. “You received $500 for milestone completion”)</li>
-                  <li>Easy in-app messaging between workers and clients</li>
-                  <li>Recommended matches based on role and skills</li>
-                </ul>
-
-                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
-                  Outcome
-                </h3>
-                <p>
-                  MyHiredito turns hiring into a low-friction, end-to-end loop:
-                  workers get a fast path from “apply” to “paid,” and businesses
-                  get vetted freelancers and tooling to manage the relationship
-                  without juggling multiple apps.
-                </p>
-              </>
-              
-            ) :  slug === "best-coast-tours" ? (
+            ) : slug === "best-coast-tours" ? (
               <>
                 <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
                   Best Coast Tours is a smart travel and booking platform that helps travelers
