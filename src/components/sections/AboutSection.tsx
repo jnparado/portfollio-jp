@@ -28,14 +28,16 @@ export function AboutSection() {
 
       <div className="mt-10 grid items-center gap-10 lg:grid-cols-[360px_1fr]">
         <div className="mx-auto w-full max-w-[360px]">
-          <div className="relative overflow-hidden rounded-3xl bg-white/5 p-2 ring-1 ring-white/10">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+          <div className="relative mx-auto aspect-square w-full max-w-[320px]">
+            <div className="absolute inset-0 rounded-full bg-amber-300/80 blur-[0px] dark:bg-amber-300/70" />
+            <div className="absolute inset-3 rounded-full bg-white/70 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.35)] ring-1 ring-black/10 backdrop-blur dark:bg-black/40 dark:ring-white/10" />
+            <div className="absolute inset-6 overflow-hidden rounded-full ring-1 ring-black/10 dark:ring-white/10">
               <Image
-                src="/images/about-photo.png"
+                src="/images/jp.jpg"
                 alt={site.name}
                 fill
                 sizes="(min-width: 1024px) 360px, 80vw"
-                className="object-cover"
+                className="object-cover object-top"
                 priority={false}
               />
             </div>
