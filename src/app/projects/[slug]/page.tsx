@@ -377,6 +377,26 @@ export default async function ProjectDetailPage({ params }: Props) {
                 </p>
 
                 <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  AI Demand Forecast
+                </h3>
+                <p>
+                  An AI-powered demand forecast predicts medicine needs from past
+                  sales, seasonality, and reorder levels—recommending reorder
+                  quantity and timing with actionable insights for critical
+                  out-of-stock items.
+                </p>
+
+                <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-[0_22px_60px_-40px_rgba(0,0,0,0.85)]">
+                  <Image
+                    src="/images/projects/pharma-inventory-forecast.png"
+                    alt="PharmaStock AI Demand Forecast with reorder recommendations"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(min-width: 1024px) 48rem, 100vw"
+                  />
+                </div>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
                   Tech stack
                 </h3>
                 <p>

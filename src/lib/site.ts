@@ -160,9 +160,9 @@ export const site = {
       description:
         "Pharmacy inventory management system with batch tracking, FEFO dispensing, low-stock alerts, and an expiry monitor with discount suggestions for near-expiry stock.",
       tags: ["Next.js", "TypeScript", "Supabase", "Inventory", "Healthcare"],
-      imageSrc: "/images/projects/project-three.svg",
+      imageSrc: "/images/projects/pharma-inventory-dashboard.png",
       imageAlt:
-        "PharmaStock pharmacy inventory dashboard with stock levels and expiry alerts",
+        "PharmaStock dashboard with sales stats, expiring list, and recent orders",
       slug: "pharma-inventory",
       repoHref: "https://github.com/jnparado/pharma-inventory",
     },

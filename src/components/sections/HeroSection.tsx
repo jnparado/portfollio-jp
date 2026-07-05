@@ -40,7 +40,7 @@ function SocialIcon({ label }: { label: string }) {
 export function HeroSection() {
   const firstName = site.name.split(" ")[0] ?? site.name;
   const roles = useMemo(
-    () => ["Full-stack Developer", "Mobile Developer", "Bubble Developer"],
+    () => ["Full-stack Developer", "Mobile Developer", "AI Engineer"],
     [],
   );
   const [roleIdx, setRoleIdx] = useState(0);
@@ -218,7 +218,7 @@ export function HeroSection() {
                 alt={site.name}
                 fill
                 sizes="(min-width: 1024px) 360px, 70vw"
-                className="object-cover"
+                className="object-cover object-center"
                 priority
               />
             </div>

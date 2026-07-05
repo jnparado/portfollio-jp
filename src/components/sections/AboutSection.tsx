@@ -37,7 +37,7 @@ export function AboutSection() {
                 alt={site.name}
                 fill
                 sizes="(min-width: 1024px) 360px, 80vw"
-                className="object-cover object-top"
+                className="object-cover object-center"
                 priority={false}
               />
             </div>
