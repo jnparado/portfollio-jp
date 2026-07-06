@@ -45,10 +45,10 @@ export type ExperienceItem = {
 
 export const site = {
   name: "Jeson Parado",
-  role: "Full‑stack Developer",
-  location: "City, Country",
+  role: "AI Engineer & Full‑Stack Developer",
+  location: "Davao City, Philippines",
   summary:
-    "I build full-stack and AI-powered applications including booking systems, chatbots, and automation tools. I specialize in integrating APIs, designing scalable workflows, and solving real business problems using modern technologies.",
+    "I'm an AI Engineer and Full-Stack Developer with 7+ years of experience building intelligent web apps, automation systems, and scalable backends. I integrate LLMs, RAG, and workflow tools like n8n into production solutions—from AI chatbots and document processing to recruitment automation and pharmacy inventory—using Next.js, TypeScript, Supabase, and OpenAI APIs to deliver measurable business value.",
   phone: "+639639493290",
   email: "paradojeson@gmail.com",
   address: "Davao City, Philippines",
@@ -107,7 +107,7 @@ export const site = {
     { label: "Backend", items: ["Node.js", "Spring Boot (REST APIs, scalable backend architecture)"] },
     { label: "Mobile Development", items: ["React Native", "iOS (Xcode)", "Android (Kotlin, Jetpack Compose)"] },
     { label: "Database", items: ["PostgreSQL", "Supabase (schema design, query optimization)"] },
-    { label: "AI & Automation", items: ["OpenAI API", "AI-driven workflows", "Prompt engineering"] },
+    { label: "AI & Automation", items: ["OpenAI API", "Grok AI", "LLMs & RAG", "n8n workflow automation", "Prompt engineering"] },
     { label: "No-Code / Low-Code", items: ["Bubble.io (rapid full-stack development, automation systems)"] },
     { label: "Tools & DevOps", items: ["GitHub", "Vercel", "Cursor", "CI/CD basics", "REST APIs", "Webhooks"] },
   ] satisfies SkillGroup[],
