@@ -273,6 +273,17 @@ export const site = {
       repoHref: "https://github.com/jnparado/kamashoetra",
     },
     {
+      title: "MyHiredito",
+      description:
+        "Staffing platform for modern teams—employers post shifts, match verified workers, manage schedules, and run payroll in one place instead of juggling multiple tools.",
+      tags: ["Staffing", "Workforce", "Scheduling", "Payroll", "Web App"],
+      imageSrc: "/images/projects/myhiredito-hero.png",
+      imageAlt:
+        "MyHiredito employer homepage — Staff smarter, Hire faster, Stay compliant",
+      slug: "myhiredito",
+      repoHref: "https://github.com/jnparado/myhiredito",
+    },
+    {
       title: "Best Coast Tours",
       description:
         "Smart travel booking platform where customers explore curated tours, customize itineraries, and book seamless travel experiences while admins manage bookings, schedules, and dynamic cost calculations.",

@@ -421,6 +421,92 @@ export default async function ProjectDetailPage({ params }: Props) {
                   payments, and support from a dedicated dashboard.
                 </p>
               </>
+            ) : slug === "myhiredito" ? (
+              <>
+                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
+                  MyHiredito is a staffing software platform built for modern
+                  teams—helping employers post shifts, match verified workers,
+                  manage schedules, and run payroll without juggling five
+                  different tools.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Two sides, one platform
+                </h3>
+                <p>
+                  The landing experience splits cleanly between{" "}
+                  <strong>Employers</strong> and <strong>Workers</strong>. Employers
+                  get a focused path to staff smarter, hire faster, and stay
+                  compliant; workers can discover open shifts and apply from the
+                  same product with a single toggle.
+                </p>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>
+                    <strong>Employers</strong> — post shifts, review matched
+                    candidates, manage schedules, and handle payroll in one
+                    dashboard
+                  </li>
+                  <li>
+                    <strong>Workers</strong> — browse available shifts, apply
+                    quickly, and track assignments from a worker-first view
+                  </li>
+                </ul>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  What it solves
+                </h3>
+                <p>
+                  Traditional staffing often means spreadsheets, separate payroll
+                  tools, and manual compliance checks. MyHiredito consolidates
+                  shift posting, worker verification, scheduling, and payroll
+                  into a single staffing operations platform—so teams can fill
+                  roles faster while keeping processes auditable and compliant.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Employer dashboard
+                </h3>
+                <p>
+                  Once signed in, employers land on a home dashboard with job
+                  posting, applicant review, messaging, worker management,
+                  billing, and reports—all in one nav. A guided onboarding flow
+                  verifies the business (government ID, business certificate, and
+                  company details) before unlocking job posting, with clear
+                  progress tracking and hiring insights along the way.
+                </p>
+
+                <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-[0_22px_60px_-40px_rgba(0,0,0,0.85)]">
+                  <Image
+                    src="/images/projects/myhiredito-dashboard.png"
+                    alt="MyHiredito employer dashboard with onboarding checklist and hiring feed"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(min-width: 1024px) 48rem, 100vw"
+                  />
+                </div>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Key features
+                </h3>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>Shift posting and worker matching</li>
+                  <li>Verified worker profiles and scheduling</li>
+                  <li>Employer onboarding with ID and business verification</li>
+                  <li>Applicant tracking, messaging, billing, and reports</li>
+                  <li>Payroll and compliance workflows in one place</li>
+                  <li>Employer / worker dual experience with clear CTAs</li>
+                </ul>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Outcome
+                </h3>
+                <p>
+                  The result is a staffing platform that feels lighter than
+                  stitching together point solutions: employers get one place to
+                  run operations, and workers get a straightforward path from
+                  discovery to booked shifts.
+                </p>
+              </>
             ) : slug === "best-coast-tours" ? (
               <>
                 <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
