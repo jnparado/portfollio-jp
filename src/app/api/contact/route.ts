@@ -5,6 +5,7 @@ type ContactBody = {
   name?: string;
   email?: string;
   phone?: string;
+  projectType?: string;
   message?: string;
 };
 
@@ -24,6 +25,7 @@ export async function POST(req: Request) {
   const name = body?.name?.trim() ?? "";
   const email = body?.email?.trim() ?? "";
   const phone = body?.phone?.trim() ?? "";
+  const projectType = body?.projectType?.trim() ?? "";
   const message = body?.message?.trim() ?? "";
 
   if (!name || !email || !message) {
@@ -64,6 +66,7 @@ export async function POST(req: Request) {
     `Name: ${name}`,
     `Email: ${email}`,
     phone ? `Phone: ${phone}` : null,
+    projectType ? `Project type: ${projectType}` : null,
     "",
     message,
   ]

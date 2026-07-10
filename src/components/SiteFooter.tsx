@@ -63,14 +63,18 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
           <div className="space-y-4">
             <p className="text-xl font-semibold tracking-tight text-white">
-              Jeson&apos;s Portfolio
+              {site.name}
             </p>
             <p className="max-w-sm text-sm leading-7 text-white/70">
-              Thank you for visiting my personal portfolio website. Connect with me over socials.
+              {site.role} — available for contract and freelance work. Let&apos;s
+              build your next AI product or full-stack platform.
             </p>
-            <p className="text-sm text-white/70">
-              Keep Rising 🚀. Connect with me over live chat!
-            </p>
+            <a
+              href="#contact"
+              className="inline-flex h-10 items-center justify-center rounded-xl bg-indigo-600 px-5 text-sm font-semibold text-white transition hover:bg-indigo-500"
+            >
+              Start a project
+            </a>
           </div>
 
           <div className="space-y-4">

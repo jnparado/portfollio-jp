@@ -71,15 +71,21 @@ export function AboutSection() {
             </div>
           </dl>
 
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href={resumeHref}
+              href="#contact"
               className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 text-sm font-semibold text-white shadow-[0_18px_45px_-22px_rgba(99,102,241,0.75)] transition hover:bg-indigo-500"
             >
-              Resume
+              Work with me
               <span aria-hidden="true" className="text-base leading-none">
                 ›
               </span>
+            </a>
+            <a
+              href={resumeHref}
+              className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 text-sm font-semibold text-zinc-950 transition hover:bg-white/10 dark:text-zinc-50"
+            >
+              Download resume
             </a>
           </div>
         </div>

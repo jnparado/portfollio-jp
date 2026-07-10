@@ -53,6 +53,9 @@ export function ProjectCard({ project }: { project: Project }) {
             </a>
           ) : null}
         </div>
+        <p className="mt-1 line-clamp-2 text-xs leading-5 text-zinc-900/80">
+          {project.description}
+        </p>
       </div>
     </article>
   );

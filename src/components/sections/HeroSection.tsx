@@ -143,26 +143,32 @@ export function HeroSection() {
 
       <div className="grid items-center gap-10 lg:grid-cols-[1fr_360px]">
         <div className="flex flex-col gap-6">
-          <div className="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <div className="inline-flex flex-wrap items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
             <span className="inline-flex size-2 rounded-full bg-emerald-500" />
-            Available for work
-            <span className="mx-2 text-zinc-300 dark:text-zinc-700">•</span>
+            {site.availability.status}
+            <span className="text-zinc-300 dark:text-zinc-700">•</span>
+            {site.availability.engagement}
+            <span className="text-zinc-300 dark:text-zinc-700">•</span>
             {site.location}
           </div>
 
           <div className="space-y-4">
-            <p className="text-3xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-4xl">
-              Hi There,
+            <p className="text-sm font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">
+              {site.role}
             </p>
 
-            <h1 className="text-4xl font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-5xl lg:text-6xl">
               I&apos;m{" "}
               <span className="text-amber-500 dark:text-amber-400">{firstName}</span>
             </h1>
 
+            <p className="max-w-2xl text-base leading-7 text-zinc-700 dark:text-zinc-300 sm:text-lg">
+              {site.heroTagline}
+            </p>
+
             <p className="max-w-2xl text-lg font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-xl">
-              I Am Into{" "}
-              <span className="text-rose-600 dark:text-rose-400">{typed}</span>{" "}
+              I build as a{" "}
+              <span className="text-rose-600 dark:text-rose-400">{typed}</span>
               <span
                 className="text-zinc-950/70 dark:text-white/70 motion-safe:animate-pulse"
                 aria-hidden="true"
@@ -174,22 +180,32 @@ export function HeroSection() {
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
-              href="#about"
+              href="#contact"
               className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-indigo-600 px-7 text-sm font-semibold text-white shadow-[0_18px_45px_-22px_rgba(99,102,241,0.75)] transition hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:w-auto"
             >
-              About Me
+              Start a project
               <svg viewBox="0 0 24 24" aria-hidden="true" className="size-4 fill-none stroke-current stroke-2">
-                <path d="M12 5v14" strokeLinecap="round" />
-                <path d="M7.5 14.5 12 19l4.5-4.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M5 12h12" strokeLinecap="round" />
+                <path d="M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
             <a
-              href="#contact"
+              href="#projects"
               className="inline-flex h-11 w-full items-center justify-center rounded-full border border-black/10 bg-white px-6 text-sm font-medium text-zinc-800 transition-colors hover:bg-zinc-50 dark:border-white/10 dark:bg-black dark:text-zinc-200 dark:hover:bg-zinc-900 sm:w-auto"
             >
-              Contact
+              View my work
             </a>
           </div>
+
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            {site.availability.responseTime} ·{" "}
+            <a
+              href={`mailto:${site.email}`}
+              className="font-semibold text-indigo-600 underline decoration-indigo-600/30 underline-offset-4 hover:decoration-indigo-600/60 dark:text-indigo-400 dark:decoration-indigo-400/30"
+            >
+              {site.email}
+            </a>
+          </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
             {site.socials.map((s) => (

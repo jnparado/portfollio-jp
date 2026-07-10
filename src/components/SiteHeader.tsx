@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const nav = [
   { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
@@ -62,7 +62,7 @@ export function SiteHeader() {
             className="no-scrollbar -mx-3 ml-auto overflow-x-auto px-3"
             aria-label="Primary navigation"
           >
-            <div className="flex w-max items-center gap-5 whitespace-nowrap text-xs font-semibold text-white/90 sm:justify-center sm:gap-10 sm:text-sm">
+            <div className="flex w-max items-center gap-5 whitespace-nowrap text-xs font-semibold text-white/90 sm:justify-center sm:gap-8 sm:text-sm">
               {nav.map((item) => (
                 <Link
                   key={item.href}
@@ -89,6 +89,13 @@ export function SiteHeader() {
               ))}
             </div>
           </nav>
+
+          <a
+            href="#contact"
+            className="hidden shrink-0 rounded-full bg-indigo-600 px-4 py-2 text-xs font-semibold text-white shadow-[0_18px_45px_-22px_rgba(99,102,241,0.75)] transition hover:bg-indigo-500 sm:inline-flex sm:text-sm"
+          >
+            Hire me
+          </a>
         </div>
       </Container>
       <div className="h-1 w-full bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-700" />

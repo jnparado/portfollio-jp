@@ -43,10 +43,23 @@ export type ExperienceItem = {
   bullets?: string[];
 };
 
+export type Service = {
+  title: string;
+  description: string;
+  deliverables: string[];
+};
+
 export const site = {
   name: "Jeson Parado",
   role: "AI Engineer & Full‑Stack Developer",
   location: "Davao City, Philippines",
+  heroTagline:
+    "I build AI-powered products that automate operations, cut manual work, and help teams move faster.",
+  availability: {
+    status: "Available for new projects",
+    responseTime: "Replies within 24 hours",
+    engagement: "Contract · Freelance · Remote worldwide",
+  },
   summary:
     "I'm an AI Engineer and Full-Stack Developer with 7+ years of experience building intelligent web apps, automation systems, and scalable backends. I integrate LLMs, RAG, and workflow tools like n8n into production solutions—from AI chatbots and document processing to recruitment automation and pharmacy inventory—using Next.js, TypeScript, Supabase, and OpenAI APIs to deliver measurable business value.",
   phone: "+639639493290",
@@ -57,6 +70,56 @@ export const site = {
     { label: "LinkedIn", href: "https://www.linkedin.com/in/jeson-parado-4362611a6/" },
     { label: "Resume", href: "/resume.pdf" },
   ] satisfies SocialLink[],
+  homepageProjectSlugs: [
+    "pharma-inventory",
+    "hr-recruitment-ai",
+    "myhiredito",
+    "nexus-medpro",
+    "best-coast-tours",
+    "deletely",
+  ],
+  services: [
+    {
+      title: "AI Applications & Automation",
+      description:
+        "Custom AI tools that replace manual work — chatbots, document processing, recruitment screening, and workflow automation with LLMs and RAG.",
+      deliverables: [
+        "AI chatbots & virtual assistants",
+        "Document & PDF analysis pipelines",
+        "n8n / API workflow automation",
+      ],
+    },
+    {
+      title: "Full-Stack Web Apps",
+      description:
+        "Production-ready SaaS dashboards, admin panels, and customer-facing apps built with Next.js, TypeScript, and Supabase.",
+      deliverables: [
+        "Next.js + TypeScript frontends",
+        "Supabase / PostgreSQL backends",
+        "Auth, RBAC & cloud deployment",
+      ],
+    },
+    {
+      title: "Staffing & Booking Platforms",
+      description:
+        "End-to-end platforms for hiring, shift management, reservations, and payments — built for healthcare, travel, and service businesses.",
+      deliverables: [
+        "Applicant & worker onboarding flows",
+        "Scheduling, billing & compliance tools",
+        "Real-time dashboards & reporting",
+      ],
+    },
+    {
+      title: "Mobile & Cross-Platform",
+      description:
+        "iOS, Android, and React Native apps that pair with your web backend — from telehealth to e-commerce and field operations.",
+      deliverables: [
+        "React Native & native iOS/Android",
+        "API integration & push notifications",
+        "App Store / Play Store delivery",
+      ],
+    },
+  ] satisfies Service[],
   skills: [
     "React",
     "React Native",
@@ -459,5 +522,11 @@ export function getProjectBySlug(slug: string): Project | undefined {
     if (p.slug === slug) return p;
   }
   return undefined;
+}
+
+export function getHomepageProjects(): Project[] {
+  return site.homepageProjectSlugs
+    .map((slug) => getProjectBySlug(slug))
+    .filter((p): p is Project => Boolean(p));
 }
 
