@@ -2,29 +2,30 @@
     "name": "portfolio-jeson",
     "version": "0.1.0",
     "private": true,
-"scripts": {
-  "dev": "next dev",
-  "dev:local": "WATCHPACK_POLLING=true next dev --hostname 127.0.0.1 --port 3000",
-  "build": "next build",
-  "start": "next start"
-},
-  "dependencies": {
-    "@ai-sdk/xai": "^3.0.82",
-    "ai": "^6.0.161",
-    "next": "^16.2.3",
-    "nodemailer": "^7.0.6",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/nodemailer": "^6.4.17",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "scripts": {
+        "dev": "next dev",
+        "dev:local": "WATCHPACK_POLLING=true next dev --hostname 127.0.0.1 --port 3000",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@ai-sdk/xai": "^3.0.82",
+        "@vercel/analytics": "^2.0.1",
+        "ai": "^6.0.161",
+        "next": "^16.2.3",
+        "nodemailer": "^7.0.6",
+        "react": "^19.2.5",
+        "react-dom": "^19.2.5"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4",
+        "@types/node": "^20",
+        "@types/nodemailer": "^6.4.17",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9",
+        "eslint-config-next": "16.2.3",
+        "tailwindcss": "^4",
+        "typescript": "^5"
+    }
 }
