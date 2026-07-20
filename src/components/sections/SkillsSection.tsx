@@ -161,7 +161,8 @@ export function SkillsSection() {
               Skills &amp; Abilities
             </p>
             <p className="mt-2 text-pretty text-sm leading-7 text-white/70">
-              A snapshot of the tools and technologies I use to ship products.
+              Full-stack, mobile, and AI skills — plus agile collaboration,
+              communication, and a customer-first mindset.
             </p>
           </div>
 

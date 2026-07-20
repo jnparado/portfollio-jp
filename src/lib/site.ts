@@ -123,7 +123,6 @@ export const site = {
   skills: [
     "React",
     "React Native",
-    "React.js",
     "Vue.js",
     "Kotlin",
     "Swift",
@@ -132,8 +131,9 @@ export const site = {
     "PHP",
     "MySQL",
     "MongoDB",
-    'Python',
+    "Python",
     "Next.js",
+    "NestJS",
     "Tailwind CSS",
     "TypeScript",
     "Node.js",
@@ -152,6 +152,8 @@ export const site = {
     "GraphQL",
     "FastAPI",
     "Flutter",
+    "Scrum",
+    "SAFe",
     "Xano",
     "Mapbox",
     "Stripe",
@@ -166,13 +168,67 @@ export const site = {
     "Vercel",
   ],
   skillGroups: [
-    { label: "Frontend", items: ["React", "Next.js", "Tailwind CSS (responsive, high-performance UI)"] },
-    { label: "Backend", items: ["Node.js", "Spring Boot (REST APIs, scalable backend architecture)"] },
-    { label: "Mobile Development", items: ["React Native", "iOS (Xcode)", "Android (Kotlin, Jetpack Compose)"] },
-    { label: "Database", items: ["PostgreSQL", "Supabase (schema design, query optimization)"] },
-    { label: "AI & Automation", items: ["OpenAI API", "Grok AI", "LLMs & RAG", "n8n workflow automation", "Prompt engineering"] },
+    {
+      label: "Backend",
+      items: [
+        "Next.js & NestJS (production APIs and server-side apps)",
+        "Node.js & GraphQL (scalable backend services)",
+        "REST APIs at scale (high-traffic integrations & webhooks)",
+        "Spring Boot (enterprise REST architecture)",
+      ],
+    },
+    {
+      label: "Frontend & Mobile",
+      items: [
+        "React.js & Next.js (responsive, high-performance UI)",
+        "Flutter (cross-platform mobile apps)",
+        "React Native, iOS (Xcode) & Android (Kotlin)",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      label: "Cloud & DevOps",
+      items: [
+        "AWS basics (EC2, S3, Lambda, RDS)",
+        "Vercel, GitHub & CI/CD pipelines",
+        "Docker & Kubernetes fundamentals",
+      ],
+    },
+    {
+      label: "Database",
+      items: ["PostgreSQL", "Supabase (schema design, query optimization)", "MySQL & MongoDB"],
+    },
+    {
+      label: "AI & Automation",
+      items: ["OpenAI API", "Grok AI", "LLMs & RAG", "n8n workflow automation", "Prompt engineering"],
+    },
+    {
+      label: "Agile & Collaboration",
+      items: [
+        "Scrum team member in self-organizing squads",
+        "Scaled Agile Framework (SAFe) exposure",
+        "Self-starter — collaborates with team and clients",
+        "Moves fast and delivers milestones under uncertainty",
+      ],
+    },
+    {
+      label: "Core Strengths",
+      items: [
+        "Strong communication skills",
+        "Problem solving & analytical thinking",
+        "Ready to work hard on complex, ambiguous problems",
+        "Customer success & people-first mindset",
+      ],
+    },
+    {
+      label: "Values",
+      items: [
+        "Excellence · Integrity · Professionalism",
+        "People Success · Customer Success",
+        "Innovation · Diversity · Fun",
+      ],
+    },
     { label: "No-Code / Low-Code", items: ["Bubble.io (rapid full-stack development, automation systems)"] },
-    { label: "Tools & DevOps", items: ["GitHub", "Vercel", "Cursor", "CI/CD basics", "REST APIs", "Webhooks"] },
   ] satisfies SkillGroup[],
   featuredProjects: [
     {
