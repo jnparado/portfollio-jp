@@ -128,6 +128,12 @@ export const site = {
     "Swift",
     "Java",
     "C#",
+    ".NET",
+    "ASP.NET Core",
+    "Blazor",
+    "Blazor WebAssembly",
+    "OAuth2",
+    "BFF",
     "PHP",
     "MySQL",
     "MongoDB",
@@ -157,6 +163,7 @@ export const site = {
     "Xano",
     "Mapbox",
     "Stripe",
+    "HubSpot",
     "Webhooks",
     "CI/CD",
     "Docker",
@@ -171,15 +178,20 @@ export const site = {
     {
       label: "Backend",
       items: [
+        "C# / .NET & ASP.NET Core (strong production experience)",
+        "BFF (Backend for Frontend) architecture",
+        "Building & consuming REST APIs at scale",
+        "OAuth2 & authentication flows (Bearer tokens, API keys)",
         "Next.js & NestJS (production APIs and server-side apps)",
         "Node.js & GraphQL (scalable backend services)",
-        "REST APIs at scale (high-traffic integrations & webhooks)",
+        "HubSpot APIs & third-party CRM integrations",
         "Spring Boot (enterprise REST architecture)",
       ],
     },
     {
       label: "Frontend & Mobile",
       items: [
+        "Blazor WebAssembly & Blazor Server",
         "React.js & Next.js (responsive, high-performance UI)",
         "Flutter (cross-platform mobile apps)",
         "React Native, iOS (Xcode) & Android (Kotlin)",
@@ -189,14 +201,19 @@ export const site = {
     {
       label: "Cloud & DevOps",
       items: [
-        "AWS basics (EC2, S3, Lambda, RDS)",
+        "AWS (EC2, S3, Lambda, RDS)",
+        "Docker containerization & deployment",
         "Vercel, GitHub & CI/CD pipelines",
-        "Docker & Kubernetes fundamentals",
+        "Kubernetes fundamentals",
       ],
     },
     {
       label: "Database",
-      items: ["PostgreSQL", "Supabase (schema design, query optimization)", "MySQL & MongoDB"],
+      items: [
+        "PostgreSQL (schema design, queries & optimization)",
+        "Supabase & relational database modeling",
+        "MySQL & MongoDB",
+      ],
     },
     {
       label: "AI & Automation",
