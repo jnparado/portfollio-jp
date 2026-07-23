@@ -327,6 +327,34 @@ export default async function ProjectDetailPage({ params }: Props) {
                   />
                 </div>
 
+                <h3 className="mt-8 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Live AI interview session
+                </h3>
+                <p>
+                  Candidates join a guided interview room where Grok asks
+                  tailored questions one at a time—referencing their resume and
+                  the job description. A side panel shows the current question,
+                  progress (e.g. question 1 of 10), and recent answers, while
+                  the AI interviewer walks through experience, skills, and role
+                  fit in a structured flow.
+                </p>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>Question-by-question progress with session timer</li>
+                  <li>Resume-aware prompts (e.g. gaps between role and background)</li>
+                  <li>Answer, repeat, and leave controls for candidates</li>
+                  <li>Recorded session with hire recommendation at the end</li>
+                </ul>
+
+                <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-[0_22px_60px_-40px_rgba(0,0,0,0.85)]">
+                  <Image
+                    src="/images/projects/hr-recruitment-ai-interview-session.png"
+                    alt="HR-recruitment-AI live interview session with AI interviewer and question panel"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(min-width: 1024px) 48rem, 100vw"
+                  />
+                </div>
+
                 <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
                   Tech stack
                 </h3>

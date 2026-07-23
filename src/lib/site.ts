@@ -138,6 +138,7 @@ export const site = {
     "MySQL",
     "MongoDB",
     "Python",
+    "Django",
     "Next.js",
     "NestJS",
     "Tailwind CSS",
@@ -176,9 +177,22 @@ export const site = {
   ],
   skillGroups: [
     {
+      label: "Full-Stack Product Engineering",
+      items: [
+        "Build end-to-end product features across backend, frontend & APIs",
+        "Partner with Product & Design for simple, intuitive user experiences",
+        "Translate customer needs into scalable technical solutions",
+        "Principled trade-offs between speed, quality & long-term maintainability",
+        "Own features in production — iteration, reliability & improvement",
+        "Contribute to shared standards, tooling & engineering practices",
+        "Work in small, empowered squads with clear product vertical ownership",
+      ],
+    },
+    {
       label: "Backend",
       items: [
         "C# / .NET & ASP.NET Core (strong production experience)",
+        "Python & Django (bonus full-stack backend)",
         "BFF (Backend for Frontend) architecture",
         "Building & consuming REST APIs at scale",
         "OAuth2 & authentication flows (Bearer tokens, API keys)",
@@ -191,8 +205,9 @@ export const site = {
     {
       label: "Frontend & Mobile",
       items: [
+        "TypeScript & React.js (modern full-stack product UI)",
         "Blazor WebAssembly & Blazor Server",
-        "React.js & Next.js (responsive, high-performance UI)",
+        "Next.js (responsive, high-performance UI)",
         "Flutter (cross-platform mobile apps)",
         "React Native, iOS (Xcode) & Android (Kotlin)",
         "Tailwind CSS",
@@ -224,6 +239,7 @@ export const site = {
       items: [
         "Scrum team member in self-organizing squads",
         "Scaled Agile Framework (SAFe) exposure",
+        "Collaborate effectively across Product, Design & Engineering",
         "Self-starter — collaborates with team and clients",
         "Moves fast and delivers milestones under uncertainty",
       ],
@@ -231,10 +247,21 @@ export const site = {
     {
       label: "Core Strengths",
       items: [
-        "Strong communication skills",
-        "Problem solving & analytical thinking",
-        "Ready to work hard on complex, ambiguous problems",
+        "Strong product & customer intuition — care about what I build and why",
+        "Ownership mindset for features in production",
+        "Curiosity, adaptability & continuous craft improvement",
+        "Strong communication & problem-solving skills",
+        "Ship meaningful features used and valued by customers",
         "Customer success & people-first mindset",
+      ],
+    },
+    {
+      label: "Bonus Experience",
+      items: [
+        "Python / Django backend development",
+        "TypeScript / React full-stack products",
+        "AWS cloud services & deployment",
+        "Fintech & payments (Stripe, billing, marketplace flows)",
       ],
     },
     {
