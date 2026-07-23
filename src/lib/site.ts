@@ -73,10 +73,10 @@ export const site = {
   homepageProjectSlugs: [
     "pharma-inventory",
     "hr-recruitment-ai",
+    "ai-disaster-simulator",
     "myhiredito",
     "nexus-medpro",
     "best-coast-tours",
-    "deletely",
   ],
   services: [
     {
@@ -340,6 +340,18 @@ export const site = {
       slug: "hr-recruitment-ai",
       href: "https://hr-recruitment-ai.vercel.app/",
       repoHref: "https://github.com/jnparado/hr_recruitment_ai",
+    },
+    {
+      title: "AI Disaster Simulator",
+      description:
+        "Interactive disaster simulation platform with flood, earthquake, fire, and outage scenarios—AI-powered evacuation routing, timeline forecasting, and SMS calamity alerts on a 3D map.",
+      tags: ["Next.js", "AI", "Mapbox", "Geospatial", "Emergency"],
+      imageSrc: "/images/projects/ai-disaster-simulator.png",
+      imageAlt:
+        "AI Disaster Simulator dashboard with flood map, timeline, and evacuation routes",
+      slug: "ai-disaster-simulator",
+      href: "https://ai-disaster-simulator.vercel.app/",
+      repoHref: "https://github.com/jnparado/ai-disaster-simulator",
     },
     {
       title: "Stylerbox",

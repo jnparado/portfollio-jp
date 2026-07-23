@@ -282,6 +282,90 @@ export default async function ProjectDetailPage({ params }: Props) {
                   clean, accessible UI that works well on both mobile and desktop.
                 </p>
               </>
+            ) : slug === "ai-disaster-simulator" ? (
+              <>
+                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
+                  AI Disaster Simulator is an interactive emergency planning
+                  platform built with Next.js that models natural disasters,
+                  visualizes impact on a live map, and generates AI-optimized
+                  evacuation routes—not just shortest distance, but safest paths
+                  based on elevation, congestion, and flood depth.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Disaster scenarios & simulation
+                </h3>
+                <p>
+                  Users configure disaster type (flood, earthquake, fire, power
+                  outage), intensity, and environmental parameters like 24-hour
+                  rainfall. A timeline slider forecasts impact from the current
+                  moment through +30 min, +1 hour, +3 hours, +12 hours, tomorrow,
+                  and up to 3 days later—updating flood depth, calamity zones,
+                  and affected roads on the map in real time.
+                </p>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>Multi-disaster types with adjustable intensity sliders</li>
+                  <li>3D terrain, city overview, and 3D flood view modes</li>
+                  <li>Live stats: flood depth, submerged zones, closed roads, evacuees</li>
+                  <li>Automated SMS alerts when a calamity nears a registered number</li>
+                </ul>
+
+                <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-[0_22px_60px_-40px_rgba(0,0,0,0.85)]">
+                  <Image
+                    src="/images/projects/ai-disaster-simulator.png"
+                    alt="AI Disaster Simulator with flood map, timeline controls, and AI evacuation planner"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(min-width: 1024px) 48rem, 100vw"
+                  />
+                </div>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  AI evacuation planner
+                </h3>
+                <p>
+                  The AI evacuation planner calculates optimal routes tailored
+                  to the scenario—prioritizing safety, traffic, flood avoidance,
+                  or emergency vehicle access:
+                </p>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>
+                    <strong>Safest route</strong> — highest elevation, avoids
+                    flood zones and fire perimeters
+                  </li>
+                  <li>
+                    <strong>Least congested</strong> — AI traffic model predicts
+                    bottlenecks and lower-congestion alternatives
+                  </li>
+                  <li>
+                    <strong>Flood avoidance</strong> — stays above predicted
+                    flood depth contours
+                  </li>
+                  <li>
+                    <strong>Emergency vehicle route</strong> — wide-lane paths
+                    optimized for ambulances and fire trucks
+                  </li>
+                </ul>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Tech stack
+                </h3>
+                <p>
+                  Built with Next.js and TypeScript, deployed on Vercel. Uses
+                  interactive mapping with geospatial overlays for flood depth
+                  and calamity zones, shareable URL state for disaster parameters,
+                  and AI-driven route optimization. Live at{" "}
+                  <a
+                    href="https://ai-disaster-simulator.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-semibold text-amber-600 underline decoration-amber-600/30 underline-offset-4 hover:decoration-amber-600/60 dark:text-amber-400 dark:decoration-amber-400/30 dark:hover:decoration-amber-400/60"
+                  >
+                    ai-disaster-simulator.vercel.app
+                  </a>
+                  .
+                </p>
+              </>
             ) : slug === "hr-recruitment-ai" ? (
               <>
                 <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
