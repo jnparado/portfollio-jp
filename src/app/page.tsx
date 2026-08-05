@@ -3,6 +3,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { QaAutomationSection } from "@/components/sections/QaAutomationSection";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Section } from "@/components/Section";
 import { getHomepageProjects, site } from "@/lib/site";
@@ -23,6 +24,10 @@ export default function Home() {
 
         <AnimatedInView delayMs={60}>
           <ServicesSection />
+        </AnimatedInView>
+
+        <AnimatedInView delayMs={70}>
+          <QaAutomationSection />
         </AnimatedInView>
 
         <AnimatedInView delayMs={80}>

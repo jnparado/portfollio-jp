@@ -49,9 +49,17 @@ export type Service = {
   deliverables: string[];
 };
 
+export type QaAutomationProfile = {
+  title: string;
+  tagline: string;
+  intro: string;
+  responsibilities: string[];
+  outcomes: string[];
+};
+
 export const site = {
   name: "Jeson Parado",
-  role: "AI Engineer & Full‑Stack Developer",
+  role: "AI Engineer · Full-Stack Developer · QA Automation",
   location: "Davao City, Philippines",
   heroTagline:
     "I build AI-powered products that automate operations, cut manual work, and help teams move faster.",
@@ -119,7 +127,42 @@ export const site = {
         "App Store / Play Store delivery",
       ],
     },
+    {
+      title: "QA Automation & Quality Engineering",
+      description:
+        "Embedded QA partner for Salesforce, APIs, and CI/CD — automated regression, integration tests, PR quality gates, and release readiness reporting.",
+      deliverables: [
+        "Salesforce Flow, Apex & LWC test automation",
+        "REST/SOAP API & AWS Lambda integration tests",
+        "GitHub Actions quality gates on every PR",
+        "AI-accelerated test authoring with human validation",
+      ],
+    },
   ] satisfies Service[],
+  qaAutomation: {
+    title: "QA Automation Engineer",
+    tagline:
+      "Quality assurance as an engineering discipline — not manual scripts.",
+    intro:
+      "I design, build, and maintain automated test coverage for complex platforms and integration layers. I work embedded with developers as the quality gate: PR reviews, CI/CD pipelines, regression suites, and clear release-readiness metrics — treating test automation as maintainable, version-controlled engineering work.",
+    responsibilities: [
+      "Automated tests for Salesforce Flows, Apex (unit & integration), and Lightning Web Components UI flows",
+      "API & integration tests — REST/SOAP, webhooks, OAuth 2.0, AWS Lambda, mocked vendors, end-to-end scenarios",
+      "Required PR reviewer for coverage, regression risk, and engineering standards before production",
+      "CI/CD integration — tests on every pull request with quality gates that block failed deployments",
+      "Test strategy per feature/integration: test data, sandboxes, scheduled regression & failure triage",
+      "Verify error handling, retries, API limits, and negative/failure-mode behavior",
+      "AI-assisted test authoring (Claude Code, Cursor, Copilot) with independent validation of all generated tests",
+      "Documentation of coverage, gaps, quality metrics, and release readiness for tech leadership",
+    ],
+    outcomes: [
+      "Automated regression for highest-risk platform areas running in CI on every PR",
+      "Integration test coverage including negative & failure scenarios",
+      "Documented PR review standards adopted by the team",
+      "Testing stages in serverless CI/CD pipelines (Lambda, API Gateway)",
+      "Reusable AI-driven testing workflows shared across the squad",
+    ],
+  } satisfies QaAutomationProfile,
   skills: [
     "JavaScript",
     "React",
@@ -160,6 +203,15 @@ export const site = {
     "Cursor",
     "Claude",
     "GitHub Copilot",
+    "Playwright",
+    "Selenium",
+    "Postman",
+    "Salesforce",
+    "Apex",
+    "LWC",
+    "SOAP",
+    "GitHub Actions",
+    "AWS Lambda",
     "REST APIs",
     "GraphQL",
     "FastAPI",
@@ -181,6 +233,66 @@ export const site = {
     "Vercel",
   ],
   skillGroups: [
+    {
+      label: "QA Automation Engineer — Role",
+      items: [
+        "Sole or embedded QA owner for platform + integration quality",
+        "Partner with Salesforce devs & integration engineers on shared delivery",
+        "Quality gate before production — coverage, risk, and standards in PR review",
+        "4–6+ years QA experience with 3+ years focused on test automation",
+        "Maintainable, version-controlled test code with clear documentation",
+      ],
+    },
+    {
+      label: "Salesforce & Platform Testing",
+      items: [
+        "Apex test classes & 75% deployment coverage requirements",
+        "End-to-end Salesforce Flow testing",
+        "Lightning Web Components (LWC) UI automation",
+        "Lightning Experience UI automation challenges",
+        "Salesforce DX, sandboxes & scratch org test environments (familiarity)",
+        "Preferred: Provar, Copado Robotic Testing, Litify / vertical SaaS on Salesforce",
+      ],
+    },
+    {
+      label: "API & Integration Test Automation",
+      items: [
+        "REST & SOAP API automated suites from scratch",
+        "Webhook flows, OAuth 2.0 auth paths & payload validation",
+        "AWS Lambda & API Gateway serverless testing",
+        "Mocked vendor responses & end-to-end integration scenarios",
+        "Negative testing — API limits, bad data, failures & retry behavior",
+        "Postman/Newman or equivalent API testing tooling",
+      ],
+    },
+    {
+      label: "UI Test Automation",
+      items: [
+        "Playwright, Selenium, or similar modern UI frameworks",
+        "Build automated UI suites from scratch — not only maintenance",
+        "JavaScript/TypeScript & Python scripting for test automation",
+        "Regression suites on schedule and on deployment",
+      ],
+    },
+    {
+      label: "CI/CD & Quality Gates",
+      items: [
+        "Wire automated tests into CI/CD — run on every pull request",
+        "GitHub Actions quality gates that block deploys on failure",
+        "Branch protection & required reviewer workflows",
+        "Serverless pipeline testing stages with Integration Engineering",
+        "Triage failures: defects vs environment/data issues",
+      ],
+    },
+    {
+      label: "AI-Assisted Test Engineering",
+      items: [
+        "Claude Code, Codex, Cursor & MCP agent workflows for test authoring",
+        "Accelerate test creation while validating all AI-generated tests",
+        "Engineering judgement — never accept AI output without review",
+        "Reusable AI-driven testing workflows for the broader team",
+      ],
+    },
     {
       label: "Full-Stack Product Engineering",
       items: [

@@ -161,8 +161,8 @@ export function SkillsSection() {
               Skills &amp; Abilities
             </p>
             <p className="mt-2 text-pretty text-sm leading-7 text-white/70">
-              Full-stack, mobile, and AI skills — plus agile collaboration,
-              communication, and a customer-first mindset.
+              Full-stack, mobile, AI, and QA automation — Salesforce, APIs,
+              CI/CD quality gates, and AI-assisted test engineering.
             </p>
           </div>
 

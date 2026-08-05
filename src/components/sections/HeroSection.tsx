@@ -37,10 +37,22 @@ function SocialIcon({ label }: { label: string }) {
   );
 }
 
+function indefiniteArticle(role: string): "a" | "an" {
+  const phrase = role.trim();
+  if (!phrase) return "a";
+  if (/^AI\b/i.test(phrase)) return "an";
+  return /^[aeiouAEIOU]/.test(phrase) ? "an" : "a";
+}
+
 export function HeroSection() {
   const firstName = site.name.split(" ")[0] ?? site.name;
   const roles = useMemo(
-    () => ["Full-stack Developer", "Mobile Developer", "AI Engineer"],
+    () => [
+      "Full-stack Developer",
+      "Mobile Developer",
+      "AI Engineer",
+      "QA Automation Engineer",
+    ],
     [],
   );
   const [roleIdx, setRoleIdx] = useState(0);
@@ -79,6 +91,9 @@ export function HeroSection() {
 
     return () => window.clearTimeout(t);
   }, [isDeleting, roleIdx, roles, typed]);
+
+  const currentRole = roles[roleIdx] ?? "";
+  const article = indefiniteArticle(currentRole);
 
   return (
     <div id="home" className="relative py-14 sm:py-20 scroll-mt-24">
@@ -167,7 +182,7 @@ export function HeroSection() {
             </p>
 
             <p className="max-w-2xl text-lg font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-xl">
-              I build as a{" "}
+              I build as {article}{" "}
               <span className="text-rose-600 dark:text-rose-400">{typed}</span>
               <span
                 className="text-zinc-950/70 dark:text-white/70 motion-safe:animate-pulse"
