@@ -13,19 +13,19 @@ export function ServicesSection() {
         {site.services.map((service) => (
           <article
             key={service.title}
-            className="rounded-2xl border border-white/10 bg-zinc-950/60 p-6 shadow-[0_22px_60px_-40px_rgba(0,0,0,0.85)] ring-1 ring-white/5"
+            className="glass-panel group p-6 transition duration-300 hover:border-indigo-500/25 hover:shadow-[0_28px_70px_-35px_rgba(99,102,241,0.25)] sm:p-8"
           >
-            <h3 className="text-lg font-extrabold tracking-tight text-white">
+            <h3 className="text-lg font-extrabold tracking-tight text-zinc-950 dark:text-white">
               {service.title}
             </h3>
-            <p className="mt-3 text-sm leading-7 text-white/75">
+            <p className="mt-3 text-sm leading-7 text-zinc-600 dark:text-white/75">
               {service.description}
             </p>
             <ul className="mt-4 space-y-2">
               {service.deliverables.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-2 text-sm text-white/80"
+                  className="flex gap-2 text-sm text-zinc-700 dark:text-white/80"
                 >
                   <span
                     className="mt-2 size-1.5 shrink-0 rounded-full bg-amber-400"
@@ -40,10 +40,7 @@ export function ServicesSection() {
       </div>
 
       <div className="mt-8 text-center">
-        <a
-          href="#contact"
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 text-sm font-semibold text-white shadow-[0_18px_45px_-22px_rgba(99,102,241,0.75)] transition hover:bg-indigo-500"
-        >
+        <a href="#contact" className="btn-primary">
           Discuss your project
           <span aria-hidden="true">→</span>
         </a>

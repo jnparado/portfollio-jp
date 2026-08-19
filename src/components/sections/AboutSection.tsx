@@ -26,7 +26,7 @@ export function AboutSection() {
         </div>
       </div>
 
-      <div className="mt-10 grid items-center gap-10 lg:grid-cols-[360px_1fr]">
+      <div className="mt-10 glass-panel grid items-center gap-10 lg:grid-cols-[360px_1fr] lg:p-10">
         <div className="mx-auto w-full max-w-[360px]">
           <div className="relative mx-auto aspect-square w-full max-w-[320px]">
             <div className="absolute inset-0 rounded-full bg-amber-300/80 blur-[0px] dark:bg-amber-300/70" />

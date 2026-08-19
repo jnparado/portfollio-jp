@@ -14,11 +14,11 @@ export function QaAutomationSection() {
       </p>
 
       <div className="mt-10 grid gap-6 lg:grid-cols-2">
-        <article className="rounded-2xl border border-white/10 bg-zinc-950/60 p-6 ring-1 ring-white/5">
-          <h3 className="text-lg font-extrabold tracking-tight text-white">
+        <article className="glass-panel p-6 sm:p-8">
+          <h3 className="text-lg font-extrabold tracking-tight text-zinc-950 dark:text-white">
             What I do
           </h3>
-          <ul className="mt-4 space-y-3 text-sm leading-6 text-white/80">
+          <ul className="mt-4 space-y-3 text-sm leading-6 text-zinc-700 dark:text-white/80">
             {qa.responsibilities.map((item) => (
               <li key={item} className="flex gap-3">
                 <span
@@ -31,11 +31,11 @@ export function QaAutomationSection() {
           </ul>
         </article>
 
-        <article className="rounded-2xl border border-white/10 bg-zinc-950/60 p-6 ring-1 ring-white/5">
-          <h3 className="text-lg font-extrabold tracking-tight text-white">
+        <article className="glass-panel p-6 sm:p-8">
+          <h3 className="text-lg font-extrabold tracking-tight text-zinc-950 dark:text-white">
             First 6 months — success looks like
           </h3>
-          <ul className="mt-4 space-y-3 text-sm leading-6 text-white/80">
+          <ul className="mt-4 space-y-3 text-sm leading-6 text-zinc-700 dark:text-white/80">
             {qa.outcomes.map((item) => (
               <li key={item} className="flex gap-3">
                 <span

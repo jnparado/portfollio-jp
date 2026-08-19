@@ -158,13 +158,15 @@ export function HeroSection() {
 
       <div className="grid items-center gap-10 lg:grid-cols-[1fr_360px]">
         <div className="flex flex-col gap-6">
-          <div className="inline-flex flex-wrap items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-            <span className="inline-flex size-2 rounded-full bg-emerald-500" />
-            {site.availability.status}
-            <span className="text-zinc-300 dark:text-zinc-700">•</span>
-            {site.availability.engagement}
-            <span className="text-zinc-300 dark:text-zinc-700">•</span>
-            {site.location}
+          <div className="inline-flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-300">
+              <span className="inline-flex size-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+              {site.availability.status}
+            </span>
+            <span className="hidden text-sm text-zinc-500 sm:inline dark:text-zinc-400">
+              {site.availability.engagement}
+            </span>
+            <span className="hidden text-sm text-zinc-400 sm:inline">· {site.location}</span>
           </div>
 
           <div className="space-y-4">
@@ -174,7 +176,7 @@ export function HeroSection() {
 
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-5xl lg:text-6xl">
               I&apos;m{" "}
-              <span className="text-amber-500 dark:text-amber-400">{firstName}</span>
+              <span className="gradient-text">{firstName}</span>
             </h1>
 
             <p className="max-w-2xl text-base leading-7 text-zinc-700 dark:text-zinc-300 sm:text-lg">
@@ -194,20 +196,14 @@ export function HeroSection() {
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href="#contact"
-              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-indigo-600 px-7 text-sm font-semibold text-white shadow-[0_18px_45px_-22px_rgba(99,102,241,0.75)] transition hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:w-auto"
-            >
+            <a href="#contact" className="btn-primary h-12 w-full sm:w-auto">
               Start a project
               <svg viewBox="0 0 24 24" aria-hidden="true" className="size-4 fill-none stroke-current stroke-2">
                 <path d="M5 12h12" strokeLinecap="round" />
                 <path d="M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
-            <a
-              href="#projects"
-              className="inline-flex h-11 w-full items-center justify-center rounded-full border border-black/10 bg-white px-6 text-sm font-medium text-zinc-800 transition-colors hover:bg-zinc-50 dark:border-white/10 dark:bg-black dark:text-zinc-200 dark:hover:bg-zinc-900 sm:w-auto"
-            >
+            <a href="#projects" className="btn-secondary h-11 w-full text-zinc-800 dark:text-zinc-200 sm:w-auto">
               View my work
             </a>
           </div>
@@ -241,9 +237,10 @@ export function HeroSection() {
 
         <div className="mx-auto w-full max-w-[360px]">
           <div className="relative mx-auto aspect-square w-full max-w-[320px]">
-            <div className="absolute inset-0 rounded-full bg-amber-300/80 blur-[0px] dark:bg-amber-300/70" />
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-amber-400/40 via-indigo-500/30 to-violet-500/40 blur-2xl" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-300/80 to-amber-400/60 dark:from-amber-300/70 dark:to-amber-500/50" />
             <div className="absolute inset-3 rounded-full bg-white/70 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.35)] ring-1 ring-black/10 backdrop-blur dark:bg-black/40 dark:ring-white/10" />
-            <div className="absolute inset-6 overflow-hidden rounded-full ring-1 ring-black/10 dark:ring-white/10">
+            <div className="absolute inset-6 overflow-hidden rounded-full ring-2 ring-white/20 shadow-2xl dark:ring-amber-400/30">
               <Image
                 src="/images/jp.jpg"
                 alt={site.name}

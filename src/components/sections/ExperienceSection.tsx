@@ -77,7 +77,7 @@ function Card({
   return (
     <div
       className={[
-        "relative ml-10 rounded-xl bg-white px-5 py-4 text-zinc-900 shadow-[0_18px_55px_-35px_rgba(0,0,0,0.65)] ring-1 ring-black/10 md:ml-0 md:max-w-[520px] dark:bg-zinc-950 dark:text-zinc-50 dark:ring-white/10",
+        "relative ml-10 rounded-2xl border border-white/10 bg-zinc-950/80 px-5 py-5 text-zinc-50 shadow-[0_18px_55px_-35px_rgba(0,0,0,0.65)] ring-1 ring-white/10 backdrop-blur transition duration-300 hover:border-indigo-500/25 md:ml-0 md:max-w-[520px]",
         side === "left" ? "md:mr-10" : "md:ml-10",
       ].join(" ")}
     >
@@ -85,7 +85,7 @@ function Card({
       <div
         aria-hidden="true"
         className={[
-          "absolute top-6 h-3 w-3 rotate-45 bg-white ring-1 ring-black/10 dark:bg-zinc-950 dark:ring-white/10",
+          "absolute top-6 h-3 w-3 rotate-45 border border-white/10 bg-zinc-950/80",
           side === "left" ? "-right-1.5 md:-right-1.5" : "-left-1.5 md:-left-1.5",
         ].join(" ")}
       />

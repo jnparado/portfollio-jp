@@ -58,7 +58,7 @@ function SocialIcon({ label }: { label: string }) {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-black/10 py-14">
+    <footer className="mt-8 border-t border-white/10 bg-zinc-950/40 py-16 backdrop-blur">
       <Container>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
           <div className="space-y-4">

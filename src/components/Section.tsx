@@ -12,21 +12,27 @@ export function Section({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-24 py-14 sm:py-18">
-      <div className="flex flex-col gap-6">
-        <header className="flex flex-col gap-3">
-          {eyebrow ? (
-            <p className="text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
-              {eyebrow}
-            </p>
-          ) : null}
-          <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-3xl">
-            {title}
-          </h2>
-        </header>
+    <section id={id} className="scroll-mt-24 py-16 sm:py-20">
+      <div className="flex flex-col gap-8">
+        {title || eyebrow ? (
+          <header className="flex max-w-3xl flex-col gap-3">
+            {eyebrow ? (
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-600 dark:text-indigo-400">
+                {eyebrow}
+              </p>
+            ) : null}
+            {title ? (
+              <>
+                <h2 className="text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-4xl">
+                  {title}
+                </h2>
+                <div className="section-accent" aria-hidden="true" />
+              </>
+            ) : null}
+          </header>
+        ) : null}
         {children}
       </div>
     </section>
   );
 }
-

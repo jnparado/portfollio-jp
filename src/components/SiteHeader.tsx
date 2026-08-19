@@ -48,13 +48,13 @@ export function SiteHeader() {
   }, [sectionIds]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/70 backdrop-blur-xl backdrop-saturate-150">
       <Container>
         <div className="flex h-18 items-center justify-between gap-6">
           <Link
             href="#home"
             aria-label="JP Home"
-            className="grid size-11 place-items-center rounded-full bg-white/5 text-sm font-extrabold tracking-tight text-white ring-1 ring-white/10 transition hover:bg-white/10"
+            className="grid size-11 place-items-center rounded-full bg-gradient-to-br from-indigo-500/20 to-violet-500/20 text-sm font-extrabold tracking-tight text-white ring-1 ring-white/15 transition hover:ring-indigo-400/40"
           >
             JP
           </Link>
@@ -93,7 +93,7 @@ export function SiteHeader() {
 
           <a
             href="#contact"
-            className="hidden shrink-0 rounded-full bg-indigo-600 px-4 py-2 text-xs font-semibold text-white shadow-[0_18px_45px_-22px_rgba(99,102,241,0.75)] transition hover:bg-indigo-500 sm:inline-flex sm:text-sm"
+            className="hidden shrink-0 rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-4 py-2 text-xs font-semibold text-white shadow-[0_18px_45px_-22px_rgba(99,102,241,0.75)] transition hover:brightness-110 sm:inline-flex sm:text-sm"
           >
             Hire me
           </a>

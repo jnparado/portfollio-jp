@@ -95,7 +95,7 @@ export function ContactSection() {
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2 lg:items-start">
         <form
           onSubmit={onSubmit}
-          className="space-y-4 rounded-3xl border border-black/10 bg-white/80 p-6 shadow-[0_22px_70px_-45px_rgba(0,0,0,0.55)] backdrop-blur dark:border-white/10 dark:bg-zinc-950/70 sm:p-10"
+          className="glass-panel space-y-4 p-6 sm:p-10"
         >
           <Field placeholder="Name" value={name} onChange={setName} type="text" />
           <Field placeholder="Email" value={email} onChange={setEmail} type="email" />
@@ -139,7 +139,7 @@ export function ContactSection() {
           ) : null}
         </form>
 
-        <div className="rounded-3xl border border-white/10 bg-zinc-950/40 p-3 backdrop-blur">
+        <div className="glass-panel p-3 sm:p-4">
           <ChatWidget />
         </div>
       </div>
