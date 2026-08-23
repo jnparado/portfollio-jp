@@ -51,7 +51,7 @@ export function HeroSection() {
       "Full-stack Developer",
       "Mobile Developer",
       "AI Engineer",
-      "QA Automation Engineer",
+      "QA / Test Engineer",
     ],
     [],
   );

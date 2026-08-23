@@ -7,7 +7,7 @@ import Link from "next/link";
 const nav = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-  { label: "QA Automation", href: "#qa-automation" },
+  { label: "QA / Test", href: "#qa-automation" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },

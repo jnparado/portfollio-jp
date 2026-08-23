@@ -49,27 +49,34 @@ export type Service = {
   deliverables: string[];
 };
 
+export type QaFitItem = {
+  requirement: string;
+  assessment: string;
+  level: "very-strong" | "strong" | "good" | "gap";
+};
+
 export type QaAutomationProfile = {
   title: string;
   tagline: string;
   intro: string;
   responsibilities: string[];
   outcomes: string[];
+  fitAssessment: QaFitItem[];
 };
 
 export const site = {
   name: "Jeson Parado",
-  role: "AI Engineer · Full-Stack Developer · QA Automation",
+  role: "QA / Test Engineer · Mobile & Full-Stack · AI Engineer",
   location: "Davao City, Philippines",
   heroTagline:
-    "I build AI-powered products that automate operations, cut manual work, and help teams move faster.",
+    "I combine QA, mobile, and full-stack engineering — testing with a builder's mindset, not a traditional manual-QA-only background.",
   availability: {
     status: "Available for new projects",
     responseTime: "Replies within 24 hours",
     engagement: "Contract · Freelance · Remote worldwide",
   },
   summary:
-    "I'm an AI Engineer and Full-Stack Developer with 7+ years of experience building intelligent web apps, automation systems, and scalable backends. I integrate LLMs, RAG, and workflow tools like n8n into production solutions—from AI chatbots and document processing to recruitment automation and pharmacy inventory—using Next.js, TypeScript, Supabase, and OpenAI APIs to deliver measurable business value.",
+    "I'm a QA / Test Engineer, AI Engineer, and Full-Stack Developer with 7+ years of experience — testing with a builder's mindset across web, mobile, and APIs. I integrate LLMs, RAG, and workflow tools like n8n into production solutions, from AI chatbots and document processing to recruitment automation and pharmacy inventory, using Next.js, TypeScript, Supabase, and OpenAI APIs to deliver measurable business value.",
   phone: "+639639493290",
   email: "paradojeson@gmail.com",
   address: "Davao City, Philippines",
@@ -128,39 +135,56 @@ export const site = {
       ],
     },
     {
-      title: "QA Automation & Quality Engineering",
+      title: "QA / Test Engineering",
       description:
-        "Embedded QA partner for Salesforce, APIs, and CI/CD — automated regression, integration tests, PR quality gates, and release readiness reporting.",
+        "QA with a mobile + full-stack engineering edge — web and device testing, API verification, release checks, test cases, and automation backed by real build/debug experience.",
       deliverables: [
-        "Salesforce Flow, Apex & LWC test automation",
-        "REST/SOAP API & AWS Lambda integration tests",
-        "GitHub Actions quality gates on every PR",
-        "AI-accelerated test authoring with human validation",
+        "End-to-end web & cross-browser testing (Chrome, Safari, Firefox, Edge)",
+        "Android & iOS device testing — Android Studio, Kotlin, Jetpack Compose, Xcode",
+        "Postman API testing, bug triage & release verification",
+        "Playwright/Selenium automation + AI-assisted test authoring",
       ],
     },
   ] satisfies Service[],
   qaAutomation: {
-    title: "QA Automation Engineer",
+    title: "QA / Test Engineer",
     tagline:
-      "Quality assurance as an engineering discipline — not manual scripts.",
+      "Strongest angle: QA + mobile + full-stack engineering — not a traditional career QA profile.",
     intro:
-      "I design, build, and maintain automated test coverage for complex platforms and integration layers. I work embedded with developers as the quality gate: PR reviews, CI/CD pipelines, regression suites, and clear release-readiness metrics — treating test automation as maintainable, version-controlled engineering work.",
+      "I bring a hybrid QA and engineering background: I test like a quality owner and debug like a developer. That means strong mobile device testing from Android/iOS build experience, confident API and web verification, structured test cases and bug triage, release validation across dev/staging/production — plus automation and AI-assisted test workflows where they add real value.",
     responsibilities: [
-      "Automated tests for Salesforce Flows, Apex (unit & integration), and Lightning Web Components UI flows",
-      "API & integration tests — REST/SOAP, webhooks, OAuth 2.0, AWS Lambda, mocked vendors, end-to-end scenarios",
-      "Required PR reviewer for coverage, regression risk, and engineering standards before production",
-      "CI/CD integration — tests on every pull request with quality gates that block failed deployments",
-      "Test strategy per feature/integration: test data, sandboxes, scheduled regression & failure triage",
-      "Verify error handling, retries, API limits, and negative/failure-mode behavior",
-      "AI-assisted test authoring (Claude Code, Cursor, Copilot) with independent validation of all generated tests",
-      "Documentation of coverage, gaps, quality metrics, and release readiness for tech leadership",
+      "End-to-end web application testing, responsive layouts & cross-browser verification",
+      "Mobile testing on Android & iOS — device builds, updates, and release verification",
+      "Test cases, QA checklists, reproduction steps & structured bug triage",
+      "API testing with Postman — REST/SOAP, webhooks, OAuth, payload & failure-mode checks",
+      "Automated UI & integration tests (Playwright, Selenium) with CI/CD quality gates",
+      "Salesforce, Apex, Flow & LWC test automation where platforms require it",
+      "Dev, staging & production validation — deployment debugging & release readiness",
+      "AI-assisted test authoring (Claude Code, Codex, Cursor, Copilot) with independent review",
     ],
     outcomes: [
-      "Automated regression for highest-risk platform areas running in CI on every PR",
-      "Integration test coverage including negative & failure scenarios",
-      "Documented PR review standards adopted by the team",
-      "Testing stages in serverless CI/CD pipelines (Lambda, API Gateway)",
-      "Reusable AI-driven testing workflows shared across the squad",
+      "Reliable regression coverage for highest-risk web & mobile flows",
+      "Clear test documentation, checklists & defect reports with reproduction steps",
+      "API & integration coverage including negative and edge-case scenarios",
+      "Faster release verification with engineering-led triage",
+      "Reusable AI-driven testing workflows validated by engineering judgement",
+    ],
+    fitAssessment: [
+      { requirement: "End-to-end web testing", assessment: "Web app testing & debugging experience", level: "strong" },
+      { requirement: "Mobile testing", assessment: "Android Studio/Kotlin/Java/Jetpack Compose + iOS/Xcode", level: "very-strong" },
+      { requirement: "Android device testing", assessment: "Direct Android development experience", level: "strong" },
+      { requirement: "Release verification", assessment: "Mobile app updates, builds & release issue resolution", level: "strong" },
+      { requirement: "Bug triage", assessment: "Extensive debugging & issue reproduction", level: "strong" },
+      { requirement: "Test cases / checklists", assessment: "QA checklists, test cases & reproduction steps", level: "strong" },
+      { requirement: "API testing", assessment: "Postman + API debugging", level: "strong" },
+      { requirement: "Web / browser testing", assessment: "Chrome, Safari, Firefox, Edge + responsive testing", level: "strong" },
+      { requirement: "Automated testing", assessment: "Strong engineering foundation — automation depth growing", level: "good" },
+      { requirement: "AI coding agents", assessment: "Claude Code, Codex, Cursor, Copilot", level: "very-strong" },
+      { requirement: "Dev / staging / production", assessment: "Full-stack deployment & debugging experience", level: "strong" },
+      { requirement: "Release process", assessment: "Relevant experience, especially mobile releases", level: "good" },
+      { requirement: "Healthcare / telehealth", assessment: "Limited direct exposure — mWell iOS telehealth adjacent", level: "gap" },
+      { requirement: "MDM", assessment: "Not a core area of experience", level: "gap" },
+      { requirement: "Continuous release", assessment: "Engineering & deployment experience is relevant", level: "good" },
     ],
   } satisfies QaAutomationProfile,
   skills: [
@@ -206,6 +230,9 @@ export const site = {
     "Playwright",
     "Selenium",
     "Postman",
+    "Android Studio",
+    "Jetpack Compose",
+    "Xcode",
     "Salesforce",
     "Apex",
     "LWC",
@@ -233,6 +260,35 @@ export const site = {
     "Vercel",
   ],
   skillGroups: [
+    {
+      label: "QA / Test Engineer — Strongest Angle",
+      items: [
+        "QA + mobile + full-stack engineering — builder mindset, not manual-QA-only",
+        "7+ years debugging, release verification & production issue resolution",
+        "Structured test cases, QA checklists & clear bug reproduction steps",
+        "Embedded quality partner for dev teams — triage, verify, and ship with confidence",
+      ],
+    },
+    {
+      label: "Web & Mobile Testing",
+      items: [
+        "End-to-end web testing — strong web app testing & debugging",
+        "Mobile testing — very strong: Android Studio, Kotlin, Java, Jetpack Compose, iOS/Xcode",
+        "Android device testing — direct Android development advantage",
+        "Cross-browser: Chrome, Safari, Firefox, Edge + responsive layout testing",
+        "Release verification — mobile app updates, builds & release issues",
+      ],
+    },
+    {
+      label: "Manual QA & Release Quality",
+      items: [
+        "Bug triage — extensive debugging & issue reproduction",
+        "Test cases, checklists & documented reproduction steps",
+        "Dev, staging & production validation",
+        "Release process support — especially mobile releases",
+        "Continuous release — engineering & deployment experience relevant",
+      ],
+    },
     {
       label: "QA Automation Engineer — Role",
       items: [
