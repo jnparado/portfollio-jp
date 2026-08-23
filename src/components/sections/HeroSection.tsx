@@ -48,7 +48,7 @@ export function HeroSection() {
   const firstName = site.name.split(" ")[0] ?? site.name;
   const roles = useMemo(
     () => [
-      "Full-stack Developer",
+      "Full-Stack Engineer",
       "Mobile Developer",
       "AI Engineer",
       "QA / Test Engineer",

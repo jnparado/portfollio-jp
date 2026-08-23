@@ -52,31 +52,71 @@ export type Service = {
 export type QaFitItem = {
   requirement: string;
   assessment: string;
-  level: "very-strong" | "strong" | "good" | "gap";
+  level: "very-strong" | "strong" | "good" | "gap" | "partial-gap";
+  fitLabel: string;
+};
+
+export type QaRiskTier = {
+  priority: string;
+  label: string;
+  examples: string[];
 };
 
 export type QaAutomationProfile = {
   title: string;
   tagline: string;
   intro: string;
+  estimatedFit: string;
+  positioning: string;
+  positioningAvoid: string;
   responsibilities: string[];
   outcomes: string[];
   fitAssessment: QaFitItem[];
+  advantage: {
+    title: string;
+    intro: string;
+    capabilities: string[];
+    workflow: string[];
+    failurePoints: string[];
+  };
+  androidEdge: {
+    title: string;
+    intro: string;
+    topics: string[];
+  };
+  aiApproach: {
+    title: string;
+    intro: string;
+    principles: string[];
+  };
+  regressionStrategy: {
+    title: string;
+    steps: string[];
+    criticalFlows: string[];
+    testScenarios: string[];
+  };
+  riskBasedTesting: {
+    title: string;
+    intro: string;
+    tiers: QaRiskTier[];
+  };
+  verdict: string;
+  mainGaps: string[];
 };
 
 export const site = {
   name: "Jeson Parado",
-  role: "QA / Test Engineer · Mobile & Full-Stack · AI Engineer",
+  role: "Full-Stack Engineer · QA & Mobile Testing · AI",
   location: "Davao City, Philippines",
   heroTagline:
-    "I combine QA, mobile, and full-stack engineering — testing with a builder's mindset, not a traditional manual-QA-only background.",
+    "Full-stack engineer with strong QA, automation, and mobile testing — I investigate failures beyond the UI, from Android builds to APIs and production releases.",
   availability: {
     status: "Available for new projects",
     responseTime: "Replies within 24 hours",
     engagement: "Contract · Freelance · Remote worldwide",
   },
   summary:
-    "I'm a QA / Test Engineer, AI Engineer, and Full-Stack Developer with 7+ years of experience — testing with a builder's mindset across web, mobile, and APIs. I integrate LLMs, RAG, and workflow tools like n8n into production solutions, from AI chatbots and document processing to recruitment automation and pharmacy inventory, using Next.js, TypeScript, Supabase, and OpenAI APIs to deliver measurable business value.",
+    "Full-stack engineer with strong QA, automation, and mobile testing experience — specializing in web and mobile applications, Android/iOS device testing, API verification, end-to-end debugging, release validation, and AI-assisted test automation. 7+ years across Next.js, TypeScript, Kotlin, PostgreSQL, and production deployments.",
   phone: "+639639493290",
   email: "paradojeson@gmail.com",
   address: "Davao City, Philippines",
@@ -149,42 +189,175 @@ export const site = {
   qaAutomation: {
     title: "QA / Test Engineer",
     tagline:
-      "Strongest angle: QA + mobile + full-stack engineering — not a traditional career QA profile.",
+      "Estimated fit: 80–88% — strongest angle is QA + mobile + full-stack engineering, not a traditional career QA profile.",
     intro:
-      "I bring a hybrid QA and engineering background: I test like a quality owner and debug like a developer. That means strong mobile device testing from Android/iOS build experience, confident API and web verification, structured test cases and bug triage, release validation across dev/staging/production — plus automation and AI-assisted test workflows where they add real value.",
+      "Full-stack engineer / QA automation engineer specializing in web and mobile applications — with hands-on Android, API testing, end-to-end debugging, release validation, and AI-assisted test automation. I work independently with engineering teams while owning quality end to end.",
+    estimatedFit: "80–88%",
+    positioning:
+      "Full-stack engineer with strong QA, automation, and mobile testing experience — not a QA engineer with some development background.",
+    positioningAvoid:
+      "Don't position as manual-QA-only. The differentiator is understanding feature → risk → test → reproduce → read code/API → automate regression → release judgement.",
     responsibilities: [
+      "Understand features, identify risk, test thoroughly, reproduce bugs, and read code/APIs to root-cause failures",
       "End-to-end web application testing, responsive layouts & cross-browser verification",
-      "Mobile testing on Android & iOS — device builds, updates, and release verification",
+      "Hands-on Android device testing — builds, signing, permissions, WebViews, lifecycle & release verification",
+      "Mobile testing on iOS — Xcode, device builds, updates, and release verification",
       "Test cases, QA checklists, reproduction steps & structured bug triage",
       "API testing with Postman — REST/SOAP, webhooks, OAuth, payload & failure-mode checks",
       "Automated UI & integration tests (Playwright, Selenium) with CI/CD quality gates",
-      "Salesforce, Apex, Flow & LWC test automation where platforms require it",
-      "Dev, staging & production validation — deployment debugging & release readiness",
+      "Risk-based test plans — prioritize by patient/workflow impact, not just bug count",
       "AI-assisted test authoring (Claude Code, Codex, Cursor, Copilot) with independent review",
     ],
     outcomes: [
       "Reliable regression coverage for highest-risk web & mobile flows",
       "Clear test documentation, checklists & defect reports with reproduction steps",
       "API & integration coverage including negative and edge-case scenarios",
-      "Faster release verification with engineering-led triage",
-      "Reusable AI-driven testing workflows validated by engineering judgement",
+      "Faster release verification with engineering-led triage across the full stack",
+      "AI-accelerated test development with validated logic — not blind trust in generated tests",
     ],
     fitAssessment: [
-      { requirement: "End-to-end web testing", assessment: "Web app testing & debugging experience", level: "strong" },
-      { requirement: "Mobile testing", assessment: "Android Studio/Kotlin/Java/Jetpack Compose + iOS/Xcode", level: "very-strong" },
-      { requirement: "Android device testing", assessment: "Direct Android development experience", level: "strong" },
-      { requirement: "Release verification", assessment: "Mobile app updates, builds & release issue resolution", level: "strong" },
-      { requirement: "Bug triage", assessment: "Extensive debugging & issue reproduction", level: "strong" },
-      { requirement: "Test cases / checklists", assessment: "QA checklists, test cases & reproduction steps", level: "strong" },
-      { requirement: "API testing", assessment: "Postman + API debugging", level: "strong" },
-      { requirement: "Web / browser testing", assessment: "Chrome, Safari, Firefox, Edge + responsive testing", level: "strong" },
-      { requirement: "Automated testing", assessment: "Strong engineering foundation — automation depth growing", level: "good" },
-      { requirement: "AI coding agents", assessment: "Claude Code, Codex, Cursor, Copilot", level: "very-strong" },
-      { requirement: "Dev / staging / production", assessment: "Full-stack deployment & debugging experience", level: "strong" },
-      { requirement: "Release process", assessment: "Relevant experience, especially mobile releases", level: "good" },
-      { requirement: "Healthcare / telehealth", assessment: "Limited direct exposure — mWell iOS telehealth adjacent", level: "gap" },
-      { requirement: "MDM", assessment: "Not a core area of experience", level: "gap" },
-      { requirement: "Continuous release", assessment: "Engineering & deployment experience is relevant", level: "good" },
+      { requirement: "End-to-end web testing", assessment: "Web application testing & debugging experience", level: "strong", fitLabel: "Strong" },
+      { requirement: "Mobile testing", assessment: "Android Studio/Kotlin/Java/Jetpack Compose + iOS/Xcode", level: "very-strong", fitLabel: "Very strong" },
+      { requirement: "Android device testing", assessment: "Direct Android development experience gives you an advantage", level: "strong", fitLabel: "Strong" },
+      { requirement: "Release verification", assessment: "Mobile app updates, builds & release issue resolution", level: "strong", fitLabel: "Strong" },
+      { requirement: "Bug triage", assessment: "Extensive debugging & issue reproduction", level: "strong", fitLabel: "Strong" },
+      { requirement: "Test cases / checklists", assessment: "QA checklists, test cases & reproduction steps", level: "strong", fitLabel: "Strong" },
+      { requirement: "API testing", assessment: "Postman + API debugging", level: "strong", fitLabel: "Strong" },
+      { requirement: "Web / browser testing", assessment: "Chrome, Safari, Firefox, Edge + responsive testing", level: "strong", fitLabel: "Strong" },
+      { requirement: "Automated testing", assessment: "Strong engineering foundation — automation depth should be demonstrated", level: "good", fitLabel: "Good" },
+      { requirement: "AI coding agents", assessment: "Claude Code, Codex, Cursor, Copilot", level: "very-strong", fitLabel: "Excellent" },
+      { requirement: "Dev / staging / production", assessment: "Full-stack deployment & debugging experience", level: "strong", fitLabel: "Strong" },
+      { requirement: "Release process", assessment: "Relevant experience, particularly mobile releases", level: "good", fitLabel: "Good" },
+      { requirement: "Healthcare / telehealth", assessment: "Not a major part of background — mWell iOS telehealth adjacent", level: "gap", fitLabel: "Gap" },
+      { requirement: "MDM", assessment: "Not a core area of experience", level: "partial-gap", fitLabel: "Gap" },
+      { requirement: "Continuous release", assessment: "Engineering & deployment experience is relevant", level: "good", fitLabel: "Good / Relevant" },
+    ],
+    advantage: {
+      title: "Engineer who understands QA",
+      intro:
+        "This role isn't just clicking through test cases. It's understanding features, identifying risk, testing thoroughly, reproducing bugs, reading code and APIs, automating regression, working with engineers, and deciding whether it's safe to release. Full-stack background makes that much easier.",
+      capabilities: [
+        "Understand feature → identify risk → test → reproduce bugs",
+        "Read code/API → automate regression → work with engineers",
+        "Decide release readiness with engineering judgement",
+      ],
+      workflow: [
+        "Android App",
+        "API",
+        "Authentication",
+        "PostgreSQL",
+        "Appointment / Patient workflow",
+      ],
+      failurePoints: [
+        "Android-specific behavior",
+        "Frontend state management",
+        "API validation",
+        "Authentication",
+        "Database state",
+        "Network behavior",
+        "Backend logic",
+        "Deployment / environment configuration",
+      ],
+    },
+    androidEdge: {
+      title: "Android experience is a real advantage",
+      intro:
+        "Hands-on Android device testing — not just testing apps, but building them. Android Studio, Kotlin, Java, Jetpack Compose, WebViews, AdMob, signing/build configuration, and mobile application updates.",
+      topics: [
+        "APK/AAB builds & signing",
+        "Android versions & device-specific behavior",
+        "Permissions, WebView behavior & network issues",
+        "Lifecycle/state problems, crashes & ANRs",
+        "Release builds vs debug builds",
+        "Play Store deployment considerations",
+      ],
+    },
+    aiApproach: {
+      title: "AI-assisted automation — with engineering judgement",
+      intro:
+        "I use Claude Code, Codex, Cursor, and Copilot to accelerate test development, debugging, refactoring, and code generation — matching roles that ask for AI coding agents to build and improve automation.",
+      principles: [
+        "Use AI to accelerate test development — don't blindly trust generated tests",
+        "Review test logic, execute tests, and validate edge cases",
+        "Ensure automation catches meaningful regressions, not false confidence",
+      ],
+    },
+    regressionStrategy: {
+      title: "Regression automation strategy",
+      steps: [
+        "Identify critical user journeys",
+        "Categorize tests by risk",
+        "Automate stable, high-value regression paths",
+        "Keep exploratory testing for areas requiring human judgement",
+        "Run tests in CI with screenshots, logs & traces on failure",
+        "Track flaky tests separately",
+        "Block releases only on meaningful failures",
+      ],
+      criticalFlows: [
+        "Patient login",
+        "Appointment booking",
+        "Provider interaction",
+        "Telehealth session",
+        "Patient data updates",
+        "Logout / session expiration",
+      ],
+      testScenarios: [
+        "Authentication, permissions & privacy-sensitive data",
+        "Network interruption, expired sessions & duplicate actions",
+        "Android background/foreground behavior & screen sizes",
+        "Slow connections, API failures, app crashes",
+        "Release/build differences (debug vs release)",
+      ],
+    },
+    riskBasedTesting: {
+      title: "Risk-based test plans",
+      intro:
+        "Not every bug has the same severity. For telehealth and healthcare workflows, I classify issues by patient and workflow impact — exactly the judgement modern QA roles ask for.",
+      tiers: [
+        {
+          priority: "P0",
+          label: "Release blocker",
+          examples: [
+            "Patient data exposed to another user",
+            "Authentication bypass",
+            "Critical appointment failure",
+            "Telehealth session completely unavailable",
+            "Incorrect patient/provider information",
+          ],
+        },
+        {
+          priority: "P1",
+          label: "High",
+          examples: [
+            "Major workflow broken for a subset of users",
+            "Android crash affecting important workflow",
+            "Appointment state incorrectly saved",
+          ],
+        },
+        {
+          priority: "P2",
+          label: "Medium",
+          examples: [
+            "Non-critical feature malfunction",
+            "UI issue with workaround",
+          ],
+        },
+        {
+          priority: "P3",
+          label: "Low",
+          examples: [
+            "Cosmetic issue",
+            "Minor spacing or text problem",
+          ],
+        },
+      ],
+    },
+    verdict:
+      "Strong fit for QA + mobile + full-stack roles. Android + API debugging + release experience + AI coding-agent workflow is unusually relevant. Main gaps: healthcare/telehealth depth, MDM, and formal automated QA infrastructure at scale.",
+    mainGaps: [
+      "Healthcare / telehealth domain depth",
+      "MDM (mobile device management)",
+      "Formal automated QA infrastructure at enterprise scale",
     ],
   } satisfies QaAutomationProfile,
   skills: [
@@ -261,6 +434,16 @@ export const site = {
   ],
   skillGroups: [
     {
+      label: "QA / Test Engineer — Application Positioning",
+      items: [
+        "Full-stack engineer with strong QA, automation & mobile testing — not manual-QA-only",
+        "Web: React, Next.js, TypeScript · Mobile: Android/Kotlin/Java/Jetpack Compose, iOS/Swift",
+        "Testing: E2E, API, regression, cross-browser, test cases, bug triage, release validation",
+        "Automation: AI-assisted test generation & maintenance (Claude Code, Codex, Cursor, Copilot)",
+        "Backend: Node.js, Python/FastAPI, PostgreSQL · Tools: Postman, Git/GitHub, Docker",
+      ],
+    },
+    {
       label: "QA / Test Engineer — Strongest Angle",
       items: [
         "QA + mobile + full-stack engineering — builder mindset, not manual-QA-only",
@@ -277,6 +460,24 @@ export const site = {
         "Android device testing — direct Android development advantage",
         "Cross-browser: Chrome, Safari, Firefox, Edge + responsive layout testing",
         "Release verification — mobile app updates, builds & release issues",
+      ],
+    },
+    {
+      label: "Android QA — Developer-Level Edge",
+      items: [
+        "Built with Android Studio — not just tested apps: Kotlin, Java, Jetpack Compose, WebViews, AdMob",
+        "APK/AAB builds, signing, Android versions & device-specific behavior",
+        "Permissions, WebView behavior, network issues, lifecycle/state & crashes",
+        "Release builds vs debug builds & Play Store deployment considerations",
+      ],
+    },
+    {
+      label: "Risk-Based Testing",
+      items: [
+        "P0 release blockers — data exposure, auth bypass, critical workflow failure",
+        "P1 high — major workflow broken, Android crash on key path, bad state saved",
+        "P2 medium — non-critical malfunction with workaround",
+        "P3 low — cosmetic / minor UI issues",
       ],
     },
     {
