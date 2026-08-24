@@ -1,5 +1,5 @@
 import { Section } from "@/components/Section";
-import { site, type QaFitItem } from "@/lib/site";
+import { site, type AiProductQaProfile, type QaAutomationProfile, type QaFitItem } from "@/lib/site";
 
 const levelStyles: Record<
   QaFitItem["level"],
@@ -24,6 +24,10 @@ const levelStyles: Record<
   gap: {
     className:
       "bg-red-500/10 text-red-700 ring-red-500/20 dark:text-red-300",
+  },
+  advantage: {
+    className:
+      "bg-indigo-500/15 text-indigo-700 ring-indigo-500/25 dark:text-indigo-300",
   },
 };
 
@@ -65,20 +69,181 @@ function WorkflowStack({ steps }: { steps: string[] }) {
   );
 }
 
-export function QaAutomationSection() {
-  const qa = site.qaAutomation;
-
+function FitAssessmentTable({ items, description }: { items: QaFitItem[]; description: string }) {
   return (
-    <Section id="qa-automation" eyebrow="QA + mobile + full-stack" title={qa.title}>
+    <article className="glass-panel p-6 sm:p-8">
+      <h3 className="text-lg font-extrabold tracking-tight text-zinc-950 dark:text-white">
+        Fit assessment
+      </h3>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">{description}</p>
+      <ul className="mt-6 divide-y divide-white/10">
+        {items.map((item) => {
+          const style = levelStyles[item.level];
+          return (
+            <li
+              key={item.requirement}
+              className="flex flex-col gap-2 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-start sm:justify-between sm:gap-6"
+            >
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-zinc-950 dark:text-white">
+                  {item.requirement}
+                </p>
+                <p className="mt-1 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                  {item.assessment}
+                </p>
+              </div>
+              <span
+                className={`inline-flex shrink-0 items-center rounded-full px-3 py-1 text-xs font-semibold ring-1 ring-inset ${style.className}`}
+              >
+                {item.fitLabel}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </article>
+  );
+}
+
+function AiProductQaPanel({ qa }: { qa: AiProductQaProfile }) {
+  return (
+    <div id="ai-product-qa">
+      <div className="flex flex-wrap items-center gap-3">
+        <span className="inline-flex items-center rounded-full bg-emerald-600/15 px-4 py-1.5 text-sm font-bold text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-300">
+          Estimated fit: {qa.estimatedFit}
+        </span>
+        <h3 className="text-xl font-extrabold tracking-tight text-zinc-950 dark:text-white">
+          {qa.title}
+        </h3>
+      </div>
+      <p className="mt-3 max-w-3xl text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+        {qa.tagline}
+      </p>
+      <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+        {qa.intro}
+      </p>
+
+      <blockquote className="glass-panel mt-6 border-l-4 border-emerald-500 p-5 sm:p-6">
+        <p className="text-sm font-semibold text-zinc-950 dark:text-white">
+          {qa.positioning}
+        </p>
+        <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+          {qa.positioningAvoid}
+        </p>
+      </blockquote>
+
+      <article className="glass-panel mt-6 p-6 sm:p-8">
+        <h4 className="text-sm font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+          Strongest selling points
+        </h4>
+        <div className="mt-4">
+          <BulletList items={qa.sellingPoints} />
+        </div>
+      </article>
+
+      <div className="mt-6">
+        <FitAssessmentTable
+          items={qa.fitAssessment}
+          description="AI product QA requirements — engineering background is an advantage when coding isn't required."
+        />
+      </div>
+
+      <div className="mt-6 grid gap-6 lg:grid-cols-2">
+        <article className="glass-panel p-6 sm:p-8">
+          <h3 className="text-lg font-extrabold tracking-tight text-zinc-950 dark:text-white">
+            {qa.advantage.title}
+          </h3>
+          <p className="mt-3 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+            {qa.advantage.intro}
+          </p>
+          <p className="mt-6 text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+            Investigation stack
+          </p>
+          <div className="mt-3 max-w-xs">
+            <WorkflowStack steps={qa.advantage.workflow} />
+          </div>
+          <div className="mt-4">
+            <BulletList items={qa.advantage.investigationQuestions} />
+          </div>
+          <p className="mt-6 text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+            Trace example — &ldquo;{qa.advantage.traceExample.uiMessage}&rdquo;
+          </p>
+          <div className="mt-3 max-w-sm">
+            <WorkflowStack steps={qa.advantage.traceExample.traceSteps} />
+          </div>
+          <p className="mt-4 text-sm leading-6 text-indigo-700 dark:text-indigo-300">
+            {qa.advantage.traceExample.finding}
+          </p>
+        </article>
+
+        <article className="glass-panel p-6 sm:p-8">
+          <h3 className="text-lg font-extrabold tracking-tight text-zinc-950 dark:text-white">
+            {qa.langSmithPrep.title}
+          </h3>
+          <p className="mt-3 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+            {qa.langSmithPrep.intro}
+          </p>
+          <div className="mt-4">
+            <BulletList items={qa.langSmithPrep.concepts} />
+          </div>
+          <p className="mt-4 rounded-lg bg-amber-500/10 px-4 py-3 text-sm leading-6 text-amber-900 ring-1 ring-amber-500/20 dark:text-amber-200">
+            {qa.langSmithPrep.note}
+          </p>
+
+          <h3 className="mt-8 text-lg font-extrabold tracking-tight text-zinc-950 dark:text-white">
+            {qa.exploratoryTesting.title}
+          </h3>
+          <p className="mt-3 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+            {qa.exploratoryTesting.intro}
+          </p>
+          <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+            Example: {qa.exploratoryTesting.exampleFeature}
+          </p>
+          <div className="mt-3">
+            <BulletList items={qa.exploratoryTesting.scenarios} />
+          </div>
+        </article>
+      </div>
+
+      <article className="glass-panel mt-6 p-6 sm:p-8">
+        <h3 className="text-lg font-extrabold tracking-tight text-zinc-950 dark:text-white">
+          Verdict
+        </h3>
+        <p className="mt-3 text-sm leading-7 text-zinc-700 dark:text-zinc-300">
+          {qa.verdict}
+        </p>
+        <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+          Prepare honestly before interviewing
+        </p>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          {qa.mainGaps.map((gap) => (
+            <li
+              key={gap}
+              className="rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-800 ring-1 ring-amber-500/20 dark:text-amber-300"
+            >
+              {gap}
+            </li>
+          ))}
+        </ul>
+      </article>
+    </div>
+  );
+}
+
+function MobileQaPanel({ qa }: { qa: QaAutomationProfile }) {
+  return (
+    <div id="mobile-qa" className="mt-16 border-t border-white/10 pt-16">
       <div className="flex flex-wrap items-center gap-3">
         <span className="inline-flex items-center rounded-full bg-indigo-600/15 px-4 py-1.5 text-sm font-bold text-indigo-700 ring-1 ring-indigo-500/25 dark:text-indigo-300">
           Estimated fit: {qa.estimatedFit}
         </span>
-        <p className="max-w-3xl text-sm font-semibold text-indigo-600 dark:text-indigo-400">
-          {qa.tagline}
-        </p>
+        <h3 className="text-xl font-extrabold tracking-tight text-zinc-950 dark:text-white">
+          {qa.title} — mobile &amp; full-stack
+        </h3>
       </div>
-
+      <p className="mt-3 max-w-3xl text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+        {qa.tagline}
+      </p>
       <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-700 dark:text-zinc-300">
         {qa.intro}
       </p>
@@ -120,40 +285,12 @@ export function QaAutomationSection() {
         </article>
       </div>
 
-      <article className="glass-panel mt-6 p-6 sm:p-8">
-        <h3 className="text-lg font-extrabold tracking-tight text-zinc-950 dark:text-white">
-          Fit assessment
-        </h3>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          How my QA + mobile + full-stack background maps to common test-engineer
-          requirements.
-        </p>
-        <ul className="mt-6 divide-y divide-white/10">
-          {qa.fitAssessment.map((item) => {
-            const style = levelStyles[item.level];
-            return (
-              <li
-                key={item.requirement}
-                className="flex flex-col gap-2 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-start sm:justify-between sm:gap-6"
-              >
-                <div className="min-w-0">
-                  <p className="text-sm font-semibold text-zinc-950 dark:text-white">
-                    {item.requirement}
-                  </p>
-                  <p className="mt-1 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-                    {item.assessment}
-                  </p>
-                </div>
-                <span
-                  className={`inline-flex shrink-0 items-center rounded-full px-3 py-1 text-xs font-semibold ring-1 ring-inset ${style.className}`}
-                >
-                  {item.fitLabel}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
-      </article>
+      <div className="mt-6">
+        <FitAssessmentTable
+          items={qa.fitAssessment}
+          description="How my QA + mobile + full-stack background maps to telehealth and mobile QA roles."
+        />
+      </div>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
         <article className="glass-panel p-6 sm:p-8">
@@ -295,6 +432,15 @@ export function QaAutomationSection() {
           ))}
         </ul>
       </article>
+    </div>
+  );
+}
+
+export function QaAutomationSection() {
+  return (
+    <Section id="qa-automation" eyebrow="Quality engineering" title="QA & Product Testing">
+      <AiProductQaPanel qa={site.aiProductQa} />
+      <MobileQaPanel qa={site.qaAutomation} />
 
       <div className="mt-8 flex flex-wrap gap-3">
         <a

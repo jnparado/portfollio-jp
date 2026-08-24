@@ -7,6 +7,7 @@ import { ChatWidget } from "@/components/ChatWidget";
 
 const projectTypes = [
   "AI application / automation",
+  "AI Product QA",
   "Full-stack web app",
   "QA / Test Engineering",
   "Staffing / booking platform",

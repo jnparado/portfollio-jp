@@ -161,8 +161,8 @@ export function SkillsSection() {
               Skills &amp; Abilities
             </p>
             <p className="mt-2 text-pretty text-sm leading-7 text-white/70">
-              Full-stack, mobile, AI, and QA / test engineering — web & device
-              testing, APIs, release verification, and automation.
+              Full-stack, mobile, AI product QA, and test engineering — exploratory
+              testing, agent traces, APIs, and root-cause analysis.
             </p>
           </div>
 

@@ -52,7 +52,7 @@ export type Service = {
 export type QaFitItem = {
   requirement: string;
   assessment: string;
-  level: "very-strong" | "strong" | "good" | "gap" | "partial-gap";
+  level: "very-strong" | "strong" | "good" | "gap" | "partial-gap" | "advantage";
   fitLabel: string;
 };
 
@@ -104,9 +104,45 @@ export type QaAutomationProfile = {
   mainGaps: string[];
 };
 
+export type AiProductQaProfile = {
+  title: string;
+  tagline: string;
+  intro: string;
+  estimatedFit: string;
+  positioning: string;
+  positioningAvoid: string;
+  sellingPoints: string[];
+  fitAssessment: QaFitItem[];
+  advantage: {
+    title: string;
+    intro: string;
+    investigationQuestions: string[];
+    workflow: string[];
+    traceExample: {
+      uiMessage: string;
+      traceSteps: string[];
+      finding: string;
+    };
+  };
+  langSmithPrep: {
+    title: string;
+    intro: string;
+    concepts: string[];
+    note: string;
+  };
+  exploratoryTesting: {
+    title: string;
+    intro: string;
+    exampleFeature: string;
+    scenarios: string[];
+  };
+  verdict: string;
+  mainGaps: string[];
+};
+
 export const site = {
   name: "Jeson Parado",
-  role: "Full-Stack Engineer · QA & Mobile Testing · AI",
+  role: "QA Specialist · AI Product Testing · Full-Stack Engineer",
   location: "Davao City, Philippines",
   heroTagline:
     "Full-stack engineer with strong QA, automation, and mobile testing — I investigate failures beyond the UI, from Android builds to APIs and production releases.",
@@ -116,7 +152,7 @@ export const site = {
     engagement: "Contract · Freelance · Remote worldwide",
   },
   summary:
-    "Full-stack engineer with strong QA, automation, and mobile testing experience — specializing in web and mobile applications, Android/iOS device testing, API verification, end-to-end debugging, release validation, and AI-assisted test automation. 7+ years across Next.js, TypeScript, Kotlin, PostgreSQL, and production deployments.",
+    "QA specialist with a full-stack engineering background — hands-on experience testing web, mobile, API, and AI-powered applications. Strong at exploratory testing, reproducing complex issues, analyzing AI/agent behavior, and tracing problems to their likely root cause. 7+ years across Next.js, TypeScript, LLMs, Kotlin, PostgreSQL, and production deployments.",
   phone: "+639639493290",
   email: "paradojeson@gmail.com",
   address: "Davao City, Philippines",
@@ -172,6 +208,17 @@ export const site = {
         "React Native & native iOS/Android",
         "API integration & push notifications",
         "App Store / Play Store delivery",
+      ],
+    },
+    {
+      title: "AI Product QA",
+      description:
+        "Hands-on product QA for AI-powered apps — exploratory testing, agent/LLM behavior analysis, trace-based investigation, and root-cause analysis without needing to write code for the role.",
+      deliverables: [
+        "Exploratory testing & intended-behavior verification",
+        "AI agent trace analysis — tool calls, context, LLM outputs",
+        "Bug investigation across UI, API, agent, and data layers",
+        "Lightweight QA documentation & regression coverage",
       ],
     },
     {
@@ -360,6 +407,112 @@ export const site = {
       "Formal automated QA infrastructure at enterprise scale",
     ],
   } satisfies QaAutomationProfile,
+  aiProductQa: {
+    title: "AI Product QA",
+    tagline:
+      "Estimated fit: 88–92% — stronger match than traditional QA roles because coding isn't required while engineering background accelerates debugging and root-cause analysis.",
+    intro:
+      "QA specialist with full-stack engineering understanding who enjoys investigating product behavior — not someone applying to write code. I test AI-powered web and mobile products with an exploratory mindset, analyze agent/LLM behavior, and trace issues to their likely root cause across UI, API, tools, and data.",
+    estimatedFit: "88–92%",
+    positioning:
+      "QA specialist with a full-stack engineering background and hands-on experience testing web, mobile, API, and AI-powered applications. Strong at exploratory testing, reproducing complex issues, analyzing AI/agent behavior, and tracing problems to their likely root cause.",
+    positioningAvoid:
+      "Don't market as someone who wants to write code for this role — they explicitly say no reading or writing code is required. Lead with engineering-level technical understanding applied to product investigation.",
+    sellingPoints: [
+      "AI experience — LLMs, RAG, agents, and AI development tools in production",
+      "Engineering knowledge — understand what happens underneath the UI without writing code for QA",
+      "Mobile coverage — Android/iOS for mobile vs desktop testing requirements",
+      "Debugging — frontend, APIs, backend, databases, integrations & deployment",
+      "Exploratory mindset — natural edge-case testing beyond happy-path instructions",
+    ],
+    fitAssessment: [
+      { requirement: "Hands-on product QA", assessment: "Extensive product development & debugging experience", level: "strong", fitLabel: "Strong" },
+      { requirement: "Testing intended behavior", assessment: "Directly applicable across web, mobile & AI features", level: "strong", fitLabel: "Strong" },
+      { requirement: "Exploratory testing", assessment: "Development background helps think of edge cases naturally", level: "very-strong", fitLabel: "Very strong" },
+      { requirement: "Bug investigation", assessment: "Strong frontend/backend/API/mobile debugging experience", level: "very-strong", fitLabel: "Very strong" },
+      { requirement: "Observability", assessment: "Production debugging & log/trace analysis experience", level: "good", fitLabel: "Good" },
+      { requirement: "Agent traces", assessment: "Strong AI experience — LangSmith-specific experience to verify", level: "partial-gap", fitLabel: "Good / Verify" },
+      { requirement: "LLM evaluations", assessment: "AI/LLM experience is a strong foundation", level: "partial-gap", fitLabel: "Good / Relevant" },
+      { requirement: "Root-cause analysis", assessment: "One of the strongest areas — engineering-led investigation", level: "very-strong", fitLabel: "Excellent" },
+      { requirement: "Mobile vs desktop", assessment: "Web + Android + iOS experience", level: "very-strong", fitLabel: "Very strong" },
+      { requirement: "Permissions / error states", assessment: "Relevant full-stack & mobile experience", level: "strong", fitLabel: "Strong" },
+      { requirement: "Regression testing", assessment: "Structured regression & release verification experience", level: "strong", fitLabel: "Strong" },
+      { requirement: "Lightweight QA documentation", assessment: "Test cases, checklists & clear reproduction steps", level: "strong", fitLabel: "Strong" },
+      { requirement: "Coding required", assessment: "They explicitly don't require it — engineering background is an advantage", level: "advantage", fitLabel: "Advantage" },
+    ],
+    advantage: {
+      title: "Engineering understanding for AI product QA",
+      intro:
+        "High-level software engineering understanding that helps trace issues and determine likely root cause — exactly where a traditional QA tester might stop at \"the AI response is wrong.\"",
+      investigationQuestions: [
+        "Was the user's input interpreted incorrectly?",
+        "Did the agent choose the wrong tool?",
+        "Was the tool response incorrect?",
+        "Was context missing from retrieval?",
+        "Did the model produce the wrong answer?",
+        "Was the UI displaying an incomplete response?",
+        "Is it reproducible?",
+        "Is it a frontend, agent, tool, or data issue?",
+      ],
+      workflow: [
+        "User action",
+        "UI",
+        "API request",
+        "Agent",
+        "LLM",
+        "Tool call",
+        "Retrieved context",
+        "Final response",
+      ],
+      traceExample: {
+        uiMessage: "I couldn't find your order.",
+        traceSteps: [
+          "User message",
+          "Agent",
+          "Order lookup tool",
+          "Wrong customer_id",
+          "No results",
+          "Agent: \"I couldn't find your order.\"",
+        ],
+        finding:
+          "The agent is passing the wrong customer identifier to the order lookup tool. The UI behavior is correct, but the agent/tool interaction is producing an incorrect result.",
+      },
+    },
+    langSmithPrep: {
+      title: "LLM traces & observability (LangSmith concepts)",
+      intro:
+        "Strong AI foundation — learning LangSmith-specific tooling before interviews. Honest about direct LangSmith experience; fluent in equivalent trace concepts.",
+      concepts: [
+        "Traces, runs & parent/child runs",
+        "Prompts, inputs/outputs & tool calls",
+        "Token usage, latency & errors",
+        "Evaluation scores & dataset-based evaluations",
+        "LLM-as-a-judge & agent trajectories",
+      ],
+      note:
+        "If LangSmith hasn't been used directly, don't claim it — describe equivalent trace investigation from building and debugging AI agents in production.",
+    },
+    exploratoryTesting: {
+      title: "Exploratory QA — beyond instructions",
+      intro:
+        "They want someone who doesn't just follow instructions. Development experience makes exhaustive edge-case exploration natural.",
+      exampleFeature: "User can update their profile",
+      scenarios: [
+        "Valid input, empty input, very long input & special characters",
+        "Invalid format, refresh during submission & double-click submit",
+        "Browser back button, mobile vs desktop layouts",
+        "Expired session & insufficient permissions",
+        "API failure, slow network & duplicate submission",
+        "Navigating away mid-flow, empty/error/success states",
+      ],
+    },
+    verdict:
+      "Very strong fit for AI product QA. Engineering background is an explicit advantage for root-cause analysis and agent investigation — better match than telehealth QA when coding isn't required. Apply with confidence; prepare LangSmith/trace concepts honestly.",
+    mainGaps: [
+      "Direct LangSmith hands-on experience (concepts understood, verify before claiming)",
+      "Formal LLM evaluation infrastructure at enterprise scale",
+    ],
+  } satisfies AiProductQaProfile,
   skills: [
     "JavaScript",
     "React",
@@ -394,6 +547,13 @@ export const site = {
     "Bubble.io",
     "Vertex AI",
     "OpenAI API",
+    "RAG",
+    "LLM Evaluations",
+    "Agent Testing",
+    "Exploratory Testing",
+    "Root-Cause Analysis",
+    "Observability",
+    "LangSmith",
     "Grok AI",
     "Google Vertex AI",
     "ChatGPT",
@@ -433,6 +593,46 @@ export const site = {
     "Vercel",
   ],
   skillGroups: [
+    {
+      label: "AI Product QA — Application Positioning",
+      items: [
+        "QA specialist with full-stack engineering background — investigates product behavior, not a coder-for-hire on QA roles",
+        "Exploratory testing, AI/agent behavior analysis & root-cause tracing across UI → API → agent → LLM → tools",
+        "Mobile vs desktop coverage — web, Android & iOS",
+        "Lightweight QA documentation, regression testing & intended-behavior verification",
+        "Estimated fit 88–92% for AI product QA roles where coding is not required",
+      ],
+    },
+    {
+      label: "AI Product QA — Fit & Strengths",
+      items: [
+        "Hands-on product QA — strong development & debugging background",
+        "Exploratory testing — very strong edge-case mindset from engineering",
+        "Bug investigation & root-cause analysis — excellent, core differentiator",
+        "Mobile vs desktop — very strong web + Android + iOS",
+        "Coding not required — engineering understanding is an explicit advantage",
+      ],
+    },
+    {
+      label: "AI Agent & LLM Trace Investigation",
+      items: [
+        "Trace investigation: user action → UI → API → agent → LLM → tool call → context → response",
+        "Ask: wrong tool? missing context? bad tool response? model error? UI display issue?",
+        "LangSmith concepts: traces, runs, parent/child runs, prompts, tool calls, latency, eval scores",
+        "Dataset evaluations, LLM-as-a-judge & agent trajectories — strong AI foundation",
+        "Honest gap: verify direct LangSmith experience before claiming; equivalent concepts from production AI work",
+      ],
+    },
+    {
+      label: "Exploratory Testing — Edge Cases",
+      items: [
+        "Beyond happy path — valid/empty/long/special-char input, invalid formats",
+        "Session & permissions — expired session, insufficient permissions, duplicate submission",
+        "Environment — API failure, slow network, refresh mid-flow, browser back, navigate away",
+        "Platform — mobile vs desktop, empty/error/success states",
+        "Profile-update example: double-click submit, refresh during submission, all state transitions",
+      ],
+    },
     {
       label: "QA / Test Engineer — Application Positioning",
       items: [
