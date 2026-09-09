@@ -366,6 +366,75 @@ export default async function ProjectDetailPage({ params }: Props) {
                   .
                 </p>
               </>
+            ) : slug === "atelier-ai-job-matching" ? (
+              <>
+                <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">
+                  Atelier is an AI-powered job matching assistant that helps
+                  candidates and employers find the right fit—pairing intelligent
+                  job recommendations with a polished, premium experience built
+                  around the idea that good hiring starts with good matches.
+                </p>
+
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  AI job matching
+                </h3>
+                <p>
+                  Atelier uses AI to understand job requirements and candidate
+                  profiles, surfacing matches where skills, experience, and role
+                  expectations align—so both sides spend less time on poor fits
+                  and more time on conversations worth having.
+                </p>
+                <ul className="ml-5 list-disc space-y-1.5">
+                  <li>AI-powered job matching for candidates and employers</li>
+                  <li>Focus on fit—jobs that fit, hires that fit</li>
+                  <li>Clean, premium UI with a professional recruitment brand</li>
+                </ul>
+
+                <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-[0_22px_60px_-40px_rgba(0,0,0,0.85)]">
+                  <Image
+                    src="/images/projects/atelier-hero.jpg"
+                    alt="Atelier AI Job Matching — AI-powered job assistant cover branding"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(min-width: 1024px) 48rem, 100vw"
+                  />
+                </div>
+
+                <h3 className="mt-8 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Brand &amp; product identity
+                </h3>
+                <p>
+                  The Atelier brand uses a refined green-and-gold palette with
+                  elegant typography—positioning the product as a high-trust AI job
+                  assistant rather than a generic job board.
+                </p>
+
+                <div className="relative mx-auto mt-6 aspect-square w-full max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-[0_22px_60px_-40px_rgba(0,0,0,0.85)]">
+                  <Image
+                    src="/images/projects/atelier-logo.jpg"
+                    alt="Atelier AI Job Assistant logo — gold A mark on deep green"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(min-width: 1024px) 24rem, 80vw"
+                  />
+                </div>
+
+                <h3 className="mt-8 text-lg font-semibold text-zinc-950 dark:text-zinc-50">
+                  Live demo
+                </h3>
+                <p>
+                  Deployed on Vercel at{" "}
+                  <a
+                    href="https://ai-job-finder-ecru.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-semibold text-amber-600 underline decoration-amber-600/30 underline-offset-4 hover:decoration-amber-600/60 dark:text-amber-400 dark:decoration-amber-400/30 dark:hover:decoration-amber-400/60"
+                  >
+                    ai-job-finder-ecru.vercel.app
+                  </a>
+                  .
+                </p>
+              </>
             ) : slug === "hr-recruitment-ai" ? (
               <>
                 <p className="text-lg font-medium text-zinc-950 dark:text-zinc-50">

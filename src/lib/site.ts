@@ -164,6 +164,7 @@ export const site = {
   homepageProjectSlugs: [
     "pharma-inventory",
     "hr-recruitment-ai",
+    "atelier-ai-job-matching",
     "ai-disaster-simulator",
     "myhiredito",
     "nexus-medpro",
@@ -935,6 +936,17 @@ export const site = {
       slug: "hr-recruitment-ai",
       href: "https://hr-recruitment-ai.vercel.app/",
       repoHref: "https://github.com/jnparado/hr_recruitment_ai",
+    },
+    {
+      title: "Atelier — AI Job Matching",
+      description:
+        "AI-powered job matching assistant that pairs candidates and employers with intelligent fit scoring—Jobs that fit. Hires that fit.",
+      tags: ["Next.js", "AI", "Job Matching", "Recruitment", "LLM"],
+      imageSrc: "/images/projects/atelier-hero.jpg",
+      imageAlt:
+        "Atelier AI Job Matching — AI-powered job assistant with elegant green and gold branding",
+      slug: "atelier-ai-job-matching",
+      href: "https://ai-job-finder-ecru.vercel.app/",
     },
     {
       title: "AI Disaster Simulator",
