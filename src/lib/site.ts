@@ -166,7 +166,6 @@ export const site = {
     "hr-recruitment-ai",
     "atelier-ai-job-matching",
     "ai-disaster-simulator",
-    "myhiredito",
     "nexus-medpro",
     "best-coast-tours",
   ],
@@ -1053,17 +1052,6 @@ export const site = {
         "Kama Shoetra dashboard showing sneaker service booking, order tracking, locker selection, and subscription management",
       slug: "kamashoetra",
       repoHref: "https://github.com/jnparado/kamashoetra",
-    },
-    {
-      title: "MyHiredito",
-      description:
-        "Staffing platform for modern teams—employers post shifts, match verified workers, manage schedules, and run payroll in one place instead of juggling multiple tools.",
-      tags: ["Staffing", "Workforce", "Scheduling", "Payroll", "Web App"],
-      imageSrc: "/images/projects/myhiredito-hero.png",
-      imageAlt:
-        "MyHiredito employer homepage — Staff smarter, Hire faster, Stay compliant",
-      slug: "myhiredito",
-      repoHref: "https://github.com/jnparado/myhiredito",
     },
     {
       title: "Best Coast Tours",
